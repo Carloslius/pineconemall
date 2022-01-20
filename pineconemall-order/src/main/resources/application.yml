@@ -1,0 +1,15 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.35.192.127:3306/pineconemall_oms?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC
+    username: root
+    password: s300056.
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto

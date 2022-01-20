@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/pineconemall.iml" filepath="$PROJECT_DIR$/.idea/pineconemall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pineconemall-common/pineconemall-common.iml" filepath="$PROJECT_DIR$/pineconemall-common/pineconemall-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pineconemall-coupon/pineconemall-coupon.iml" filepath="$PROJECT_DIR$/pineconemall-coupon/pineconemall-coupon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pineconemall-member/pineconemall-member.iml" filepath="$PROJECT_DIR$/pineconemall-member/pineconemall-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pineconemall-order/pineconemall-order.iml" filepath="$PROJECT_DIR$/pineconemall-order/pineconemall-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pineconemall-product/pineconemall-product.iml" filepath="$PROJECT_DIR$/pineconemall-product/pineconemall-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pineconemall-ware/pineconemall-ware.iml" filepath="$PROJECT_DIR$/pineconemall-ware/pineconemall-ware.iml" />
+      <module fileurl="file://$PROJECT_DIR$/renren-fast/renren-fast.iml" filepath="$PROJECT_DIR$/renren-fast/renren-fast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/renren-generator/renren-generator.iml" filepath="$PROJECT_DIR$/renren-generator/renren-generator.iml" />
+    </modules>
+  </component>
+</project>

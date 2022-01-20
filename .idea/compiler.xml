@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pineconemall-coupon" />
+        <module name="pineconemall-ware" />
+        <module name="pineconemall-order" />
+        <module name="pineconemall-common" />
+        <module name="renren-fast" />
+        <module name="pineconemall-member" />
+        <module name="renren-generator" />
+        <module name="pineconemall-product" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pineconemall" target="1.5" />
+      <module name="pineconemall-common" target="8" />
+      <module name="pineconemall-coupon" target="1.8" />
+      <module name="pineconemall-member" target="1.8" />
+      <module name="pineconemall-order" target="1.8" />
+      <module name="pineconemall-product" target="1.8" />
+      <module name="pineconemall-ware" target="1.8" />
+      <module name="renren-fast" target="1.8" />
+      <module name="renren-generator" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="pineconemall-coupon" options="-parameters" />
+      <module name="pineconemall-member" options="-parameters" />
+      <module name="pineconemall-order" options="-parameters" />
+      <module name="pineconemall-product" options="-parameters" />
+      <module name="pineconemall-ware" options="-parameters" />
+      <module name="renren-fast" options="-parameters" />
+      <module name="renren-generator" options="-parameters" />
+    </option>
+  </component>
+</project>
