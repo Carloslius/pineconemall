@@ -29,47 +29,44 @@ public class CategoryController {
     private CategoryService categoryService;
 
     /**
-     * 编辑类别时，数据回显
+     * 00、查询类别具体信息，编辑类别时，数据回显
+     * /product/category/info/{catId}
      */
-    @RequestMapping("/info/{catId}")
-    //@RequiresPermissions("product:category:info")
+    @GetMapping("/info/{catId}")
     public R info(@PathVariable("catId") Long catId){
-		CategoryEntity category = categoryService.getById(catId);
+        CategoryEntity category = categoryService.getById(catId);
         return R.ok().put("data", category);
     }
 
     /**
-     * 保存，增加类别
+     * 00、增加三级分类
+     * /product/category/save
      */
-    @RequestMapping("/save")
-    //@RequiresPermissions("product:category:save")
+    @PostMapping("/save")
     public R save(@RequestBody CategoryEntity category){
-		categoryService.save(category);
+        categoryService.save(category);
         return R.ok();
     }
 
     /**
-     * 修改
-     */
-    @RequestMapping("/update")
-    //@RequiresPermissions("product:category:update")
-    public R update(@RequestBody CategoryEntity category){
-		categoryService.updateCascadeById(category);
-        return R.ok();
-    }
-
-
-
-    /**
-     * 删除
+     * 00、批量删除类别信息
+     * /product/category/delete
      * @RequestBody: 获取请求体，必须发送post请求
      * SpringMVC自动将请求体的数据（json），转为对应的对象
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:category:delete")
-    public R delete(@RequestBody Long[] catIds){
-		//categoryService.removeByIds(Arrays.asList(catIds));
-        categoryService.removeMenuByIds(Arrays.asList(catIds));
+    public R delete(@RequestBody List<Long> catIds){
+        categoryService.removeMenuByIds(catIds);
+        return R.ok();
+    }
+
+    /**
+     * 00、修改三级分类
+     * /product/category/update
+     */
+    @PostMapping("/update")
+    public R update(@RequestBody CategoryEntity category){
+        categoryService.updateCascadeById(category);
         return R.ok();
     }
 

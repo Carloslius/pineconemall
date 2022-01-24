@@ -31,17 +31,6 @@ public class CategoryBrandRelationController {
     /**
      * 列表
      */
-    @GetMapping("/catelog/list")
-    //@RequiresPermissions("product:categorybrandrelation:list")
-    public R list(@RequestParam("brandId") Long brandId){
-        List<CategoryBrandRelationEntity> data = categoryBrandRelationService.catelogList(brandId);
-
-        return R.ok().put("data", data);
-    }
-
-    /**
-     * 列表
-     */
     @RequestMapping("/list")
     //@RequiresPermissions("product:categorybrandrelation:list")
     public R list(@RequestParam Map<String, Object> params){
@@ -49,7 +38,6 @@ public class CategoryBrandRelationController {
 
         return R.ok().put("page", page);
     }
-
 
     /**
      * 信息
@@ -63,18 +51,6 @@ public class CategoryBrandRelationController {
     }
 
     /**
-     * 保存
-     */
-    @RequestMapping("/save")
-    //@RequiresPermissions("product:categorybrandrelation:save")
-    public R save(@RequestBody CategoryBrandRelationEntity categoryBrandRelation){
-		categoryBrandRelationService.saveDetail(categoryBrandRelation);
-
-        return R.ok();
-    }
-
-
-    /**
      * 修改
      */
     @RequestMapping("/update")
@@ -85,14 +61,43 @@ public class CategoryBrandRelationController {
         return R.ok();
     }
 
+
     /**
-     * 删除
+     * 14、获取分类关联的品牌
+     * /product/categorybrandrelation/brands/list
+     */
+    @GetMapping("/brands/list")
+    public R brandListByCatelogId(@RequestParam("catId") Long catId){
+        List<CategoryBrandRelationEntity> data = categoryBrandRelationService.brandList(catId);
+        return R.ok().put("data", data);
+    }
+
+    /**
+     * 15、获取品牌关联的分类
+     * /product/categorybrandrelation/catelog/list
+     */
+    @GetMapping("/catelog/list")
+    public R catelogListByBrandId(@RequestParam("brandId") Long brandId){
+        List<CategoryBrandRelationEntity> data = categoryBrandRelationService.catelogList(brandId);
+        return R.ok().put("data", data);
+    }
+
+    /**
+     * 16、新增品牌与分类关联关系
+     * product/categorybrandrelation/save
+     */
+    @RequestMapping("/save")
+    public R save(@RequestBody CategoryBrandRelationEntity categoryBrandRelation){
+        categoryBrandRelationService.saveDetail(categoryBrandRelation);
+        return R.ok();
+    }
+
+    /**
+     * 00、删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:categorybrandrelation:delete")
-    public R delete(@RequestBody Long[] ids){
-		categoryBrandRelationService.removeByIds(Arrays.asList(ids));
-
+    public R delete(@RequestBody List<Long> ids){
+        categoryBrandRelationService.removeByIds(ids);
         return R.ok();
     }
 

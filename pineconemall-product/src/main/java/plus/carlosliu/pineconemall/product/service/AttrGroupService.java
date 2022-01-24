@@ -28,6 +28,10 @@ public interface AttrGroupService extends IService<AttrGroupEntity> {
      */
     PageUtils queryPage(Long categoryId, Map<String, Object> params);
 
+    /**
+     * 删除属性与分组的关联关系
+     * @param entities 保存了要删除信息的数组 [{"attrId":1,"attrGroupId":2}]
+     */
     void deleteRelation(AttrAttrgroupRelationEntity[] entities);
 }
 

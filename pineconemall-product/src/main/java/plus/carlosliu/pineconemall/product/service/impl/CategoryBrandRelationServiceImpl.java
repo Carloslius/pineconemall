@@ -35,8 +35,15 @@ public class CategoryBrandRelationServiceImpl extends ServiceImpl<CategoryBrandR
                 new Query<CategoryBrandRelationEntity>().getPage(params),
                 new QueryWrapper<CategoryBrandRelationEntity>()
         );
-
         return new PageUtils(page);
+    }
+
+    @Override
+    public List<CategoryBrandRelationEntity> brandList(Long catId) {
+        LambdaQueryWrapper<CategoryBrandRelationEntity> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(catId != null, CategoryBrandRelationEntity::getCatelogId, catId);
+        List<CategoryBrandRelationEntity> data = baseMapper.selectList(queryWrapper);
+        return data;
     }
 
     @Override
@@ -53,8 +60,12 @@ public class CategoryBrandRelationServiceImpl extends ServiceImpl<CategoryBrandR
         Long catelogId = categoryBrandRelation.getCatelogId();
         BrandEntity brandEntity = brandDao.selectById(brandId);
         CategoryEntity categoryEntity = categoryDao.selectById(catelogId);
-        categoryBrandRelation.setBrandName(brandEntity.getName());
-        categoryBrandRelation.setCatelogName(categoryEntity.getName());
+        if (brandEntity != null){
+            categoryBrandRelation.setBrandName(brandEntity.getName());
+        }
+        if (categoryEntity != null) {
+            categoryBrandRelation.setCatelogName(categoryEntity.getName());
+        }
         baseMapper.insert(categoryBrandRelation);
     }
 
@@ -64,8 +75,8 @@ public class CategoryBrandRelationServiceImpl extends ServiceImpl<CategoryBrandR
         categoryBrandRelation.setBrandId(brandId);
         categoryBrandRelation.setBrandName(name);
         LambdaQueryWrapper<CategoryBrandRelationEntity> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(CategoryBrandRelationEntity::getBrandId, brandId);
-        this.update(categoryBrandRelation, queryWrapper);
+        queryWrapper.eq(brandId != null, CategoryBrandRelationEntity::getBrandId, brandId);
+        baseMapper.update(categoryBrandRelation, queryWrapper);
     }
 
     @Override
@@ -74,8 +85,8 @@ public class CategoryBrandRelationServiceImpl extends ServiceImpl<CategoryBrandR
         categoryBrandRelation.setCatelogId(catId);
         categoryBrandRelation.setCatelogName(name);
         LambdaQueryWrapper<CategoryBrandRelationEntity> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(CategoryBrandRelationEntity::getCatelogId, catId);
-        this.update(categoryBrandRelation, queryWrapper);
+        queryWrapper.eq(catId != null, CategoryBrandRelationEntity::getCatelogId, catId);
+        baseMapper.update(categoryBrandRelation, queryWrapper);
     }
 
 }

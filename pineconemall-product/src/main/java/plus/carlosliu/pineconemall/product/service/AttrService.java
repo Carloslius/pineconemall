@@ -20,16 +20,48 @@ public interface AttrService extends IService<AttrEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
 
-    void saveAttr(AttrVo attr);
-
+    /**
+     * 获取分类规格参数
+     * 获取分类销售属性
+     * @param params 分页参数
+     * @param catelogId 类别id
+     * @param type 规格参数/销售属性
+     * @return 分页数据
+     */
     PageUtils queryTypeAttrPage(Map<String, Object> params, Long catelogId, String type);
 
+    /**
+     * 保存属性【规格参数，销售属性】
+     * @param attr 属性各字段值
+     */
+    void saveAttr(AttrVo attr);
+
+    /**
+     * 查询属性详情
+     * @param attrId 属性id
+     * @return AttrRespVo对象，多封装了4个字段
+     */
     AttrRespVo getDetailById(Long attrId);
 
+    /**
+     * 修改属性
+     * @param attr 属性各字段值
+     */
     void updateAttr(AttrVo attr);
 
+    /**
+     * 获取属性分组的关联的所有属性
+     * @param attrgroupId 属性分组id
+     * @return 所有属性的List集合
+     */
     List<AttrEntity> getRelationAttr(Long attrgroupId);
 
+    /**
+     * 获取属性分组没有关联的其他属性
+     * @param attrgroupId 属性分组id
+     * @param params 分页参数
+     * @return 分页数据
+     */
     PageUtils getNoRelationAttr(Long attrgroupId, Map<String, Object> params);
 }
 

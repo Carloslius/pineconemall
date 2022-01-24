@@ -24,7 +24,17 @@ public interface CategoryService extends IService<CategoryEntity> {
      */
     List<CategoryEntity> listWithTree();
 
+    /**
+     * 批量删除类别信息
+     * @param idList 需要批量删除的类别id集合
+     */
     void removeMenuByIds(List<Long> idList);
+
+    /**
+     * 修改三级分类
+     * @param category 三级分类信息
+     */
+    void updateCascadeById(CategoryEntity category);
 
     /**
      * 找到指定Id的类别的完整路径
@@ -34,6 +44,5 @@ public interface CategoryService extends IService<CategoryEntity> {
      */
     Long[] findCatelogPath(Long catelogId);
 
-    void updateCascadeById(CategoryEntity category);
 }
 

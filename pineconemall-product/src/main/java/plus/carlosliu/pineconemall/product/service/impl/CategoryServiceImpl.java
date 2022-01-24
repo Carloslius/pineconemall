@@ -37,10 +37,8 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
                 new Query<CategoryEntity>().getPage(params),
                 new QueryWrapper<CategoryEntity>()
         );
-
         return new PageUtils(page);
     }
-
 
     @Override
     public void removeMenuByIds(List<Long> idList) {
@@ -50,13 +48,13 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
     @Override
     public void updateCascadeById(CategoryEntity category) {
+        // 1、修改基本信息
         baseMapper.updateById(category);
         if (!StringUtils.isEmpty(category.getName())){
+            // 2、修改关联信息，修改pms_category_brand_relation(品牌和类别关联表)中类别名字段
             categoryBrandRelationService.updateCategoryNameCascade(category.getCatId(), category.getName());
         }
     }
-
-
 
     @Override
     public List<CategoryEntity> listWithTree() {
@@ -104,8 +102,8 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     private List<Long> findParentPath(Long catelogId, List<Long> paths) {
         // 1、搜集当前节点id
         paths.add(catelogId);
-        CategoryEntity entity = this.getById(catelogId);
-        if (entity.getParentCid() != 0){
+        CategoryEntity entity = baseMapper.selectById(catelogId);
+        if (entity != null && entity.getParentCid() != 0){
             // 2、递归查询父节点类别id
             this.findParentPath(entity.getParentCid(), paths);
         }

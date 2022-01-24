@@ -29,19 +29,6 @@ public class AttrController {
     private AttrService attrService;
 
     /**
-     * 列表    /product/attr/sale/list/{catelogId}
-     *        /product/attr/base/list/{catelogId}
-     */
-    @RequestMapping("/{type}/list/{catelogId}")
-    //@RequiresPermissions("product:attr:list")
-    public R baseAttrList(@RequestParam Map<String, Object> params,
-                          @PathVariable("catelogId") Long catelogId, @PathVariable("type") String type){
-        PageUtils page = attrService.queryTypeAttrPage(params, catelogId, type);
-
-        return R.ok().put("page", page);
-    }
-
-    /**
      * 列表
      */
     @RequestMapping("/list")
@@ -50,39 +37,6 @@ public class AttrController {
         PageUtils page = attrService.queryPage(params);
 
         return R.ok().put("page", page);
-    }
-
-
-    /**
-     * 信息 查询属性详情 /product/attr/info/{attrId}
-     */
-    @RequestMapping("/info/{attrId}")
-    //@RequiresPermissions("product:attr:info")
-    public R info(@PathVariable("attrId") Long attrId){
-        AttrRespVo attrRespVo = attrService.getDetailById(attrId);
-        return R.ok().put("attr", attrRespVo);
-    }
-
-    /**
-     * 保存
-     */
-    @RequestMapping("/save")
-    //@RequiresPermissions("product:attr:save")
-    public R save(@RequestBody AttrVo attr){
-		attrService.saveAttr(attr);
-
-        return R.ok();
-    }
-
-    /**
-     * 修改 /product/attr/update
-     */
-    @RequestMapping("/update")
-    //@RequiresPermissions("product:attr:update")
-    public R update(@RequestBody AttrVo attr){
-		attrService.updateAttr(attr);
-
-        return R.ok();
     }
 
     /**
@@ -96,4 +50,46 @@ public class AttrController {
         return R.ok();
     }
 
+    /**
+     * 05、获取分类规格参数
+     * 09、获取分类销售属性
+     * /product/attr/base/list/{catelogId}
+     * /product/attr/sale/list/{catelogId}
+     */
+    @GetMapping("/{type}/list/{catelogId}")
+    public R baseAttrList(@RequestParam Map<String, Object> params,
+                          @PathVariable("catelogId") Long catelogId, @PathVariable("type") String type){
+        PageUtils page = attrService.queryTypeAttrPage(params, catelogId, type);
+        return R.ok().put("page", page);
+    }
+
+    /**
+     * 06、保存属性【规格参数，销售属性】
+     * /product/attr/save
+     */
+    @PostMapping("/save")
+    public R save(@RequestBody AttrVo attr){
+        attrService.saveAttr(attr);
+        return R.ok();
+    }
+
+    /**
+     * 07、查询属性详情
+     * /product/attr/info/{attrId}
+     */
+    @GetMapping("/info/{attrId}")
+    public R info(@PathVariable("attrId") Long attrId){
+        AttrRespVo attrRespVo = attrService.getDetailById(attrId);
+        return R.ok().put("attr", attrRespVo);
+    }
+
+    /**
+     * 08、修改属性
+     * /product/attr/update
+     */
+    @PostMapping("/update")
+    public R update(@RequestBody AttrVo attr){
+        attrService.updateAttr(attr);
+        return R.ok();
+    }
 }

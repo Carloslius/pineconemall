@@ -3,6 +3,8 @@ package plus.carlosliu.pineconemall.product.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -35,12 +37,6 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
     }
 
     @Override
-    public void deleteRelation(AttrAttrgroupRelationEntity[] entities) {
-        attrAttrgroupRelationDao.deleteBatchRelation(entities);
-    }
-
-
-    @Override
     public PageUtils queryPage(Long categoryId, Map<String, Object> params) {
         String key = (String) params.get("key");
         LambdaQueryWrapper<AttrGroupEntity> queryWrapper = new LambdaQueryWrapper<>();
@@ -54,6 +50,11 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
         IPage<AttrGroupEntity> page = this.page(
                 new Query<AttrGroupEntity>().getPage(params), queryWrapper);
         return new PageUtils(page);
+    }
+
+    @Override
+    public void deleteRelation(AttrAttrgroupRelationEntity[] entities) {
+        attrAttrgroupRelationDao.deleteBatchRelation(entities);
     }
 
 }
