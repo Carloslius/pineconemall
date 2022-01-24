@@ -1,0 +1,22 @@
+spring:
+  application:
+   name: pineconemall-coupon
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 7fbc1fb8-f467-4750-91a7-4b6e47f3be06
+        group: dev
+        extension-configs[0]:
+          data-id: datasource.yaml
+          group: dev
+          refresh: true
+        extension-configs[1]:
+          data-id: mybatis.yaml
+          group: dev
+          refresh: true
+        extension-configs[2]:
+          data-id: base.yaml
+          group: dev
+          refresh: true

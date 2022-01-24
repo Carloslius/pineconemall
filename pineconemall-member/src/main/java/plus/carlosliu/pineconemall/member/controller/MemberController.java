@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import plus.carlosliu.pineconemall.member.entity.MemberEntity;
+import plus.carlosliu.pineconemall.member.feign.CouponFeignService;
 import plus.carlosliu.pineconemall.member.service.MemberService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.R;
@@ -30,6 +31,17 @@ import plus.carlosliu.common.utils.R;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
+    @Autowired
+    CouponFeignService couponFeignService;
+
+    @RequestMapping("/coupons")
+    public R test(){
+        MemberEntity memberEntity = new MemberEntity();
+        memberEntity.setNickname("刘浩松");
+        R memberCoupon = couponFeignService.memberCoupon();
+        return R.ok().put("member", memberEntity).put("coupons", memberCoupon.get("coupons"));
+    }
 
     /**
      * 列表

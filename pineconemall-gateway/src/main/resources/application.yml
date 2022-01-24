@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: baidu-route
+          uri: https://www.baidu.com
+          predicates:
+            - After=2021-01-20T17:42:47.789-07:00[America/Denver]
+            - Query=url,baidu
+        - id: qq-route
+          uri: https://www.qq.com
+          predicates:
+            - After=2022-01-20T17:42:47.789-07:00[America/Denver]
+            - Query=url,qq
+
+        - id: product-route
+          uri: lb://pineconemall-product
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*),/$\{segment}
+
+        - id: third-party
+          uri: lb://pineconemall-thrid-party
+          predicates:
+            - Path=/api/thirdparty/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*),/$\{segment}
+
+        - id: admin-route
+          uri: lb://renren-fast
+          predicates :
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*),/renren-fast/$\{segment}
+          # http://localhost:88/captcha.jpg ==> http://localhost:8080/renren-fast/captcha.jpg

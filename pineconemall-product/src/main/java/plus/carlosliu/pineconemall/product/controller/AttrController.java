@@ -1,20 +1,18 @@
 package plus.carlosliu.pineconemall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import plus.carlosliu.pineconemall.product.entity.AttrEntity;
 import plus.carlosliu.pineconemall.product.service.AttrService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.R;
-
+import plus.carlosliu.pineconemall.product.vo.AttrRespVo;
+import plus.carlosliu.pineconemall.product.vo.AttrVo;
 
 
 /**
@@ -31,6 +29,19 @@ public class AttrController {
     private AttrService attrService;
 
     /**
+     * 列表    /product/attr/sale/list/{catelogId}
+     *        /product/attr/base/list/{catelogId}
+     */
+    @RequestMapping("/{type}/list/{catelogId}")
+    //@RequiresPermissions("product:attr:list")
+    public R baseAttrList(@RequestParam Map<String, Object> params,
+                          @PathVariable("catelogId") Long catelogId, @PathVariable("type") String type){
+        PageUtils page = attrService.queryTypeAttrPage(params, catelogId, type);
+
+        return R.ok().put("page", page);
+    }
+
+    /**
      * 列表
      */
     @RequestMapping("/list")
@@ -43,14 +54,13 @@ public class AttrController {
 
 
     /**
-     * 信息
+     * 信息 查询属性详情 /product/attr/info/{attrId}
      */
     @RequestMapping("/info/{attrId}")
     //@RequiresPermissions("product:attr:info")
     public R info(@PathVariable("attrId") Long attrId){
-		AttrEntity attr = attrService.getById(attrId);
-
-        return R.ok().put("attr", attr);
+        AttrRespVo attrRespVo = attrService.getDetailById(attrId);
+        return R.ok().put("attr", attrRespVo);
     }
 
     /**
@@ -58,19 +68,19 @@ public class AttrController {
      */
     @RequestMapping("/save")
     //@RequiresPermissions("product:attr:save")
-    public R save(@RequestBody AttrEntity attr){
-		attrService.save(attr);
+    public R save(@RequestBody AttrVo attr){
+		attrService.saveAttr(attr);
 
         return R.ok();
     }
 
     /**
-     * 修改
+     * 修改 /product/attr/update
      */
     @RequestMapping("/update")
     //@RequiresPermissions("product:attr:update")
-    public R update(@RequestBody AttrEntity attr){
-		attrService.updateById(attr);
+    public R update(@RequestBody AttrVo attr){
+		attrService.updateAttr(attr);
 
         return R.ok();
     }

@@ -5,6 +5,10 @@
       <list>
         <option value="$PROJECT_DIR$/pineconemall-common/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pineconemall-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/renren-fast-master/pom.xml" />
+        <option value="$PROJECT_DIR$/renren-fast/pom.xml" />
+        <option value="$PROJECT_DIR$/pineconemall-thrid-party/pom.xml" />
       </list>
     </option>
   </component>

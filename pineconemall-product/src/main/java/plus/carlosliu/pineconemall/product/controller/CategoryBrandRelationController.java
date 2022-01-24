@@ -1,20 +1,18 @@
 package plus.carlosliu.pineconemall.product.controller;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import plus.carlosliu.pineconemall.product.entity.CategoryBrandRelationEntity;
 import plus.carlosliu.pineconemall.product.service.CategoryBrandRelationService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.R;
-
+import sun.swing.BakedArrayList;
 
 
 /**
@@ -29,6 +27,17 @@ import plus.carlosliu.common.utils.R;
 public class CategoryBrandRelationController {
     @Autowired
     private CategoryBrandRelationService categoryBrandRelationService;
+
+    /**
+     * 列表
+     */
+    @GetMapping("/catelog/list")
+    //@RequiresPermissions("product:categorybrandrelation:list")
+    public R list(@RequestParam("brandId") Long brandId){
+        List<CategoryBrandRelationEntity> data = categoryBrandRelationService.catelogList(brandId);
+
+        return R.ok().put("data", data);
+    }
 
     /**
      * 列表
@@ -59,10 +68,11 @@ public class CategoryBrandRelationController {
     @RequestMapping("/save")
     //@RequiresPermissions("product:categorybrandrelation:save")
     public R save(@RequestBody CategoryBrandRelationEntity categoryBrandRelation){
-		categoryBrandRelationService.save(categoryBrandRelation);
+		categoryBrandRelationService.saveDetail(categoryBrandRelation);
 
         return R.ok();
     }
+
 
     /**
      * 修改

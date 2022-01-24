@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: pineconemall-product
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 5e4030a3-0b84-477f-aeaf-e2fa1135a77a
