@@ -46,13 +46,12 @@ public class BrandController {
     }
 
     /**
-     * 00、批量删除品牌
+     * 00、批量删除品牌，需要删除关联表中的关联关系
      * /product/brand/delete
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:brand:delete")
     public R deleteBatch(@RequestBody List<Long> brandIds){
-        brandService.removeByIds(brandIds);
+        brandService.removeCascadeByIds(brandIds);
         return R.ok();
     }
 

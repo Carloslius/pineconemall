@@ -1,16 +1,16 @@
 package plus.carlosliu.pineconemall.ware.controller;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import plus.carlosliu.common.to.SkuHasStockTo;
 import plus.carlosliu.pineconemall.ware.entity.WareSkuEntity;
 import plus.carlosliu.pineconemall.ware.service.WareSkuService;
 import plus.carlosliu.common.utils.PageUtils;
@@ -30,17 +30,6 @@ import plus.carlosliu.common.utils.R;
 public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;
-
-    /**
-     * 列表
-     */
-    @RequestMapping("/list")
-    //@RequiresPermissions("ware:waresku:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = wareSkuService.queryPage(params);
-
-        return R.ok().put("page", page);
-    }
 
 
     /**
@@ -85,6 +74,31 @@ public class WareSkuController {
 		wareSkuService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
+    }
+
+
+    /**
+     * 02、查询商品库存
+     * /ware/waresku/list
+     */
+    @GetMapping("/list")
+    public R list(@RequestParam Map<String, Object> params){
+        PageUtils page = wareSkuService.queryPageByCondition(params);
+        return R.ok().put("page", page);
+    }
+
+    /**
+     * 查询sku是否有库存，上架功能远程调用
+     */
+    @PostMapping("/hasStock")
+    public Map<Long, Boolean> getSkuHasStock(@RequestBody List<Long> skuIds){
+        Map<Long, Boolean> map = new HashMap<>();
+        List<SkuHasStockTo> stockTos =  wareSkuService.getSkuHasStock(skuIds);
+        stockTos.stream().filter(stockTo -> {
+            map.put(stockTo.getSkuId(), stockTo.getHasStock());
+            return true;
+        }).collect(Collectors.toList());
+        return map;
     }
 
 }

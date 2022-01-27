@@ -63,5 +63,18 @@ public interface AttrService extends IService<AttrEntity> {
      * @return 分页数据
      */
     PageUtils getNoRelationAttr(Long attrgroupId, Map<String, Object> params);
+
+    /**
+     * 级联删除分组和属性关联表中该基础属性的所有数据
+     * @param attrIds 基础属性id
+     */
+    void removeCascadeByIds(List<Long> attrIds);
+
+    /**
+     * 在指定的所有属性集合里筛选出可以被检索的属性
+     * @param attrIds 所有属性id的集合
+     * @return 可以被检索的属性id的集合
+     */
+    List<Long> selectSearchAttrIds(List<Long> attrIds);
 }
 

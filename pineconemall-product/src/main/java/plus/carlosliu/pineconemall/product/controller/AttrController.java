@@ -8,9 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import plus.carlosliu.pineconemall.product.entity.AttrEntity;
+import plus.carlosliu.pineconemall.product.entity.ProductAttrValueEntity;
 import plus.carlosliu.pineconemall.product.service.AttrService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.R;
+import plus.carlosliu.pineconemall.product.service.ProductAttrValueService;
 import plus.carlosliu.pineconemall.product.vo.AttrRespVo;
 import plus.carlosliu.pineconemall.product.vo.AttrVo;
 
@@ -25,8 +27,11 @@ import plus.carlosliu.pineconemall.product.vo.AttrVo;
 @RestController
 @RequestMapping("product/attr")
 public class AttrController {
+
     @Autowired
     private AttrService attrService;
+    @Autowired
+    private ProductAttrValueService productAttrValueService;
 
     /**
      * 列表
@@ -40,13 +45,11 @@ public class AttrController {
     }
 
     /**
-     * 删除
+     * 级联删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:attr:delete")
-    public R delete(@RequestBody Long[] attrIds){
-		attrService.removeByIds(Arrays.asList(attrIds));
-
+    public R delete(@RequestBody List<Long> attrIds){
+		attrService.removeCascadeByIds(attrIds);
         return R.ok();
     }
 
@@ -90,6 +93,26 @@ public class AttrController {
     @PostMapping("/update")
     public R update(@RequestBody AttrVo attr){
         attrService.updateAttr(attr);
+        return R.ok();
+    }
+
+    /**
+     * 22、获取spu规格
+     * /product/attr/base/listforspu/{spuId}
+     */
+    @GetMapping("/base/listforspu/{spuId}")
+    public R baseAttrListForSpu(@PathVariable("spuId") Long spuId){
+        List<ProductAttrValueEntity> productAttrValueEntities =  productAttrValueService.baseAttrListForSpu(spuId);
+        return R.ok().put("data", productAttrValueEntities);
+    }
+
+    /**
+     * 23、修改商品规格
+     * /product/attr/update/{spuId}
+     */
+    @PostMapping("/update/{spuId}")
+    public R updateSpuAttr(@RequestBody List<ProductAttrValueEntity> productAttrValueList, @PathVariable("spuId") Long spuId){
+        productAttrValueService.updateSpuAttr(spuId, productAttrValueList);
         return R.ok();
     }
 }

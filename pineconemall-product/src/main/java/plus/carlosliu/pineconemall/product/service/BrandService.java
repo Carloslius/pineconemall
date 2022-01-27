@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.pineconemall.product.entity.BrandEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -27,5 +28,11 @@ public interface BrandService extends IService<BrandEntity> {
      * @param brand 品牌详细信息
      */
     void updateCascadeById(BrandEntity brand);
+
+    /**
+     * 批量删除品牌信息，级联删除分类与品牌关联表中的数据
+     * @param brandIds 批量删除的品牌id
+     */
+    void removeCascadeByIds(List<Long> brandIds);
 }
 

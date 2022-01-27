@@ -19,6 +19,7 @@ import org.springframework.util.StringUtils;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.Query;
 
+import plus.carlosliu.pineconemall.product.dao.CategoryBrandRelationDao;
 import plus.carlosliu.pineconemall.product.dao.CategoryDao;
 import plus.carlosliu.pineconemall.product.entity.CategoryEntity;
 import plus.carlosliu.pineconemall.product.service.CategoryBrandRelationService;
@@ -30,6 +31,8 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
     @Autowired
     private CategoryBrandRelationService categoryBrandRelationService;
+    @Autowired
+    private CategoryBrandRelationDao categoryBrandRelationDao;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -41,9 +44,11 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     }
 
     @Override
-    public void removeMenuByIds(List<Long> idList) {
-        // TODO 检查当前要删除的菜单是否被别的地方引用
-        baseMapper.deleteBatchIds(idList);
+    public void removeCascadeByIds(List<Long> catIds) {
+        // 1、删除关联信息，pms_category_brand_relation(类别和品牌关联表)中的对应数据
+        categoryBrandRelationDao.deleteBatchRelationByCatIds(catIds);
+        // 2、删除基本信息
+        baseMapper.deleteBatchIds(catIds);
     }
 
     @Override

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.pineconemall.ware.entity.PurchaseDetailEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +17,13 @@ import java.util.Map;
 public interface PurchaseDetailService extends IService<PurchaseDetailEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 查询采购需求，根据条件查询采购需求信息
+     * @param params 分页参数
+     * @return 分页数据
+     */
+    PageUtils queryPageByCondition(Map<String, Object> params);
+
 }
 

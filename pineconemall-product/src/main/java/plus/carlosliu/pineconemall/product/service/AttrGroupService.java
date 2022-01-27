@@ -33,5 +33,11 @@ public interface AttrGroupService extends IService<AttrGroupEntity> {
      * @param entities 保存了要删除信息的数组 [{"attrId":1,"attrGroupId":2}]
      */
     void deleteRelation(AttrAttrgroupRelationEntity[] entities);
+
+    /**
+     * 级联删除分组和属性关联表中该分组的所有数据
+     * @param attrGroupIds 分组id
+     */
+    void removeCascadeByIds(List<Long> attrGroupIds);
 }
 

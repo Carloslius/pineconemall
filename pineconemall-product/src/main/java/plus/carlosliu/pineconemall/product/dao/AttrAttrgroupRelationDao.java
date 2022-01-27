@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import plus.carlosliu.pineconemall.product.entity.AttrGroupEntity;
 
+import java.util.List;
+
 /**
  * 属性&属性分组关联
  * 
@@ -17,4 +19,8 @@ import plus.carlosliu.pineconemall.product.entity.AttrGroupEntity;
 public interface AttrAttrgroupRelationDao extends BaseMapper<AttrAttrgroupRelationEntity> {
 
     void deleteBatchRelation(@Param("entities") AttrAttrgroupRelationEntity[] entities);
+
+    void deleteBatchRelationByAttrGroupIds(@Param("attrGroupIds") List<Long> attrGroupIds);
+
+    void deleteBatchRelationByAttrIds(@Param("attrIds") List<Long> attrIds);
 }

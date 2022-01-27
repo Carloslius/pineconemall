@@ -56,7 +56,7 @@ public class CategoryController {
      */
     @RequestMapping("/delete")
     public R delete(@RequestBody List<Long> catIds){
-        categoryService.removeMenuByIds(catIds);
+        categoryService.removeCascadeByIds(catIds);
         return R.ok();
     }
 

@@ -2,21 +2,25 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: baidu-route
-          uri: https://www.baidu.com
-          predicates:
-            - After=2021-01-20T17:42:47.789-07:00[America/Denver]
-            - Query=url,baidu
-        - id: qq-route
-          uri: https://www.qq.com
-          predicates:
-            - After=2022-01-20T17:42:47.789-07:00[America/Denver]
-            - Query=url,qq
 
         - id: product-route
           uri: lb://pineconemall-product
           predicates:
             - Path=/api/product/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*),/$\{segment}
+
+        - id: member-route
+          uri: lb://pineconemall-member
+          predicates:
+            - Path=/api/member/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*),/$\{segment}
+
+        - id: ware-route
+          uri: lb://pineconemall-ware
+          predicates:
+            - Path=/api/ware/**
           filters:
             - RewritePath=/api/?(?<segment>.*),/$\{segment}
 

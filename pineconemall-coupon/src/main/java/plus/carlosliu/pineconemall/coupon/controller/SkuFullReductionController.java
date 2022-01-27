@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import plus.carlosliu.common.to.SkuReductionTo;
 import plus.carlosliu.pineconemall.coupon.entity.SkuFullReductionEntity;
 import plus.carlosliu.pineconemall.coupon.service.SkuFullReductionService;
 import plus.carlosliu.common.utils.PageUtils;
@@ -84,6 +85,17 @@ public class SkuFullReductionController {
     public R delete(@RequestBody Long[] ids){
 		skuFullReductionService.removeByIds(Arrays.asList(ids));
 
+        return R.ok();
+    }
+
+
+    /**
+     * feign远程调用：保存sku的满减和折扣信息
+     * saveSpuInfo()
+     */
+    @RequestMapping("/saveInfo")
+    public R saveInfo(@RequestBody SkuReductionTo skuReductionTo){
+        skuFullReductionService.saveSkuReduction(skuReductionTo);
         return R.ok();
     }
 

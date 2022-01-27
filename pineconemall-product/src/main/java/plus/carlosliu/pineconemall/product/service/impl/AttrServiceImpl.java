@@ -79,7 +79,9 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
                 if (attrGroupRelation != null && attrGroupRelation.getAttrGroupId() != null) {
                     // 1.2、属性分组表中查出对应的属性分组名
                     AttrGroupEntity attrGroupEntity = attrGroupDao.selectById(attrGroupRelation.getAttrGroupId());
-                    attrRespVo.setGroupName(attrGroupEntity.getAttrGroupName());
+                    if (attrGroupEntity != null && attrGroupEntity.getAttrGroupName() != null){
+                        attrRespVo.setGroupName(attrGroupEntity.getAttrGroupName());
+                    }
                 }
             }
             // 2、设置分类的名字
@@ -106,8 +108,8 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
         // 2、保存关联关系，只有基础属性用保存到pms_attr_attrgroup_relation(基础属性和属性分组关联表)中
         if (attr.getAttrType() == ProductConstant.AttrEnum.ATTR_TYPE_BASE.getCode() && attr.getAttrGroupId() != null) {
             AttrAttrgroupRelationEntity attrGroupRelation = new AttrAttrgroupRelationEntity();
-            attrGroupRelation.setAttrId(attr.getAttrId());
-            attrGroupRelation.setAttrGroupId(attr.getAttrGroupId());
+            attrGroupRelation.setAttrId(attrEntity.getAttrId());// attr中没有属性id值，attrEntity有回显的id
+            attrGroupRelation.setAttrGroupId(attr.getAttrGroupId());//attrEntity中没有分组id值
             attrAttrgroupRelationDao.insert(attrGroupRelation);
         }
     }
@@ -239,6 +241,35 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
         return new PageUtils(page);
     }
 
+    @Override
+    public void removeCascadeByIds(List<Long> attrIds) {
+        // 1、删除pms_attr_attrgroup_relation分组与基础属性关联表中关联数据
+        List<Long> baseAttrIds = attrIds.stream().map(attrId -> {
+            AttrEntity attrEntity = baseMapper.selectById(attrId);
+            if (attrEntity != null && attrEntity.getAttrType() == ProductConstant.AttrEnum.ATTR_TYPE_BASE.getCode()) {
+                return attrId;
+            }
+            return 0L;
+        }).collect(Collectors.toList());
+        attrAttrgroupRelationDao.deleteBatchRelationByAttrIds(baseAttrIds);
+        // 2、删除基本信息
+        baseMapper.deleteBatchIds(attrIds);
+    }
 
+    @Override
+    public List<Long> selectSearchAttrIds(List<Long> attrIds) {
+//        List<Long> attrsIds = attrIds.stream().filter(attrId -> {
+//            AttrEntity attr = baseMapper.selectById(attrId);
+//            return attr.getSearchType() == 1;
+//        }).collect(Collectors.toList());
+        LambdaQueryWrapper<AttrEntity> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.in(attrIds != null, AttrEntity::getAttrId, attrIds);
+        queryWrapper.eq(AttrEntity::getSearchType, 1);
+        List<AttrEntity> attrEntities = baseMapper.selectList(queryWrapper);
+        List<Long> attrsIds = attrEntities.stream().map(attr -> {
+            return attr.getAttrId();
+        }).collect(Collectors.toList());
+        return attrsIds;
+    }
 
 }

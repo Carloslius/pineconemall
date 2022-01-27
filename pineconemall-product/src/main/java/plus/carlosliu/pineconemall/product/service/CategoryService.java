@@ -25,10 +25,10 @@ public interface CategoryService extends IService<CategoryEntity> {
     List<CategoryEntity> listWithTree();
 
     /**
-     * 批量删除类别信息
-     * @param idList 需要批量删除的类别id集合
+     * 批量删除类别信息，级联删除分类与品牌关联表中的数据
+     * @param catIds 需要批量删除的类别id集合
      */
-    void removeMenuByIds(List<Long> idList);
+    void removeCascadeByIds(List<Long> catIds);
 
     /**
      * 修改三级分类

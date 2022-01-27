@@ -57,4 +57,12 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
         attrAttrgroupRelationDao.deleteBatchRelation(entities);
     }
 
+    @Override
+    public void removeCascadeByIds(List<Long> attrGroupIds) {
+        // 1、删除pms_attr_attrgroup_relation分组与基础属性关联表中关联数据
+        attrAttrgroupRelationDao.deleteBatchRelationByAttrGroupIds(attrGroupIds);
+        // 2、删除基本信息
+        baseMapper.deleteBatchIds(attrGroupIds);
+    }
+
 }

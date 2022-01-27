@@ -63,17 +63,15 @@ public class AttrGroupController {
         return R.ok();
     }
 
+
     /**
-     * 删除
+     * 级联删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:attrgroup:delete")
-    public R delete(@RequestBody Long[] attrGroupIds){
-		attrGroupService.removeByIds(Arrays.asList(attrGroupIds));
-
+    public R delete(@RequestBody List<Long> attrGroupIds){
+		attrGroupService.removeCascadeByIds(attrGroupIds);
         return R.ok();
     }
-
 
     /**
      * 03、获取分类属性分组

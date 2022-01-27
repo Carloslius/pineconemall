@@ -18,5 +18,19 @@
         </foreach>
     </delete>
 
+    <delete id="deleteBatchRelationByAttrGroupIds">
+        delete from pms_attr_attrgroup_relation where
+        <foreach collection="attrGroupIds" item="attrGroupId" separator=" or ">
+            attr_group_id = #{attrGroupId}
+        </foreach>
+    </delete>
+
+    <delete id="deleteBatchRelationByAttrIds">
+        delete from pms_attr_attrgroup_relation where attr_id in
+        <foreach collection="attrIds" item="attrId" open="(" close=")" separator=", ">
+            #{attrId}
+        </foreach>
+    </delete>
+
 
 </mapper>
