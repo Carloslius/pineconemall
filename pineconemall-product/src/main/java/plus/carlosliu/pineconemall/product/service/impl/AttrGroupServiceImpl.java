@@ -9,6 +9,7 @@ import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.Query;
@@ -18,8 +19,9 @@ import plus.carlosliu.pineconemall.product.dao.AttrGroupDao;
 import plus.carlosliu.pineconemall.product.entity.AttrAttrgroupRelationEntity;
 import plus.carlosliu.pineconemall.product.entity.AttrGroupEntity;
 import plus.carlosliu.pineconemall.product.service.AttrGroupService;
+import plus.carlosliu.pineconemall.product.vo.web.SkuItemVo;
 
-
+@Transactional
 @Service("attrGroupService")
 public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEntity> implements AttrGroupService {
 
@@ -63,6 +65,11 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
         attrAttrgroupRelationDao.deleteBatchRelationByAttrGroupIds(attrGroupIds);
         // 2、删除基本信息
         baseMapper.deleteBatchIds(attrGroupIds);
+    }
+
+    @Override
+    public List<SkuItemVo.SpuItemAttrGroupVo> getAttrGroupWithAttrsBySpuId(Long spuId, Long catalogId) {
+        return baseMapper.getAttrGroupWithAttrsBySpuId(spuId, catalogId);
     }
 
 }

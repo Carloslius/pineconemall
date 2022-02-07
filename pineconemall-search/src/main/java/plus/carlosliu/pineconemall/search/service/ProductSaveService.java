@@ -1,6 +1,6 @@
 package plus.carlosliu.pineconemall.search.service;
 
-import plus.carlosliu.common.to.es.SkuEsModel;
+import plus.carlosliu.pineconemall.search.to.es.SkuEsModel;
 
 import java.io.IOException;
 import java.util.List;

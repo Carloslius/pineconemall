@@ -6,6 +6,7 @@ import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.Query;
@@ -14,7 +15,7 @@ import plus.carlosliu.pineconemall.ware.dao.WareInfoDao;
 import plus.carlosliu.pineconemall.ware.entity.WareInfoEntity;
 import plus.carlosliu.pineconemall.ware.service.WareInfoService;
 
-
+@Transactional
 @Service("wareInfoService")
 public class WareInfoServiceImpl extends ServiceImpl<WareInfoDao, WareInfoEntity> implements WareInfoService {
 

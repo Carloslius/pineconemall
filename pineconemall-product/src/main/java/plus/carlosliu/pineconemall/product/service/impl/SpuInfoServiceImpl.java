@@ -249,7 +249,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
             // 3、设置每个sku是否有库存
             if (finalSkuHasStock == null) {
-                skuEsModel.setHasStock(true);
+                skuEsModel.setHasStock(false);
             }else {
                 skuEsModel.setHasStock(finalSkuHasStock.get(sku.getSkuId()));
             }

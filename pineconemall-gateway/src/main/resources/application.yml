@@ -6,7 +6,7 @@ spring:
         - id: product-route
           uri: lb://pineconemall-product
           predicates:
-            - Path=/api/product/**
+            - Path=/api/product/**, /hello
           filters:
             - RewritePath=/api/?(?<segment>.*),/$\{segment}
 
@@ -25,7 +25,7 @@ spring:
             - RewritePath=/api/?(?<segment>.*),/$\{segment}
 
         - id: third-party
-          uri: lb://pineconemall-thrid-party
+          uri: lb://pineconemall-third-party
           predicates:
             - Path=/api/thirdparty/**
           filters:
@@ -38,3 +38,16 @@ spring:
           filters:
             - RewritePath=/api/?(?<segment>.*),/renren-fast/$\{segment}
           # http://localhost:88/captcha.jpg ==> http://localhost:8080/renren-fast/captcha.jpg
+
+        - id: pineconemall-host/detail-route
+          uri: lb://pineconemall-product
+          predicates:
+            - Host=pineconemall.com,item.pineconemall.com
+        - id: pineconemall-search-route
+          uri: lb://pineconemall-search
+          predicates:
+            - Host=search.pineconemall.com
+        - id: pineconemall-auth-server-route
+          uri: lb://pineconemall-auth-server
+          predicates:
+            - Host=auth.pineconemall.com

@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import plus.carlosliu.common.constant.WareConstant;
 import plus.carlosliu.common.utils.PageUtils;
@@ -28,7 +29,7 @@ import plus.carlosliu.pineconemall.ware.vo.MergeVo;
 import plus.carlosliu.pineconemall.ware.vo.PurchaseDoneItemVo;
 import plus.carlosliu.pineconemall.ware.vo.PurchaseDoneVo;
 
-
+@Transactional
 @Service("purchaseService")
 public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity> implements PurchaseService {
 

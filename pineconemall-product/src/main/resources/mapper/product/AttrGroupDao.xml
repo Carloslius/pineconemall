@@ -12,6 +12,24 @@
         <result property="icon" column="icon"/>
         <result property="catelogId" column="catelog_id"/>
     </resultMap>
+    
+    <resultMap id="spuItemAttrGroupVo" type="plus.carlosliu.pineconemall.product.vo.web.SkuItemVo$SpuItemAttrGroupVo">
+        <result property="groupName" column="attr_group_name"></result>
+        <collection property="attrs" ofType="plus.carlosliu.pineconemall.product.vo.web.SkuItemVo$SpuBaseAttrVo">
+            <result property="attrName" column="attr_name"></result>
+            <result property="attrValue" column="attr_value"></result>
+        </collection>
+    </resultMap>
+
+    <select id="getAttrGroupWithAttrsBySpuId"
+            resultMap="spuItemAttrGroupVo">
+        select pav.spu_id, ag.attr_group_id, ag.attr_group_name, a.attr_id, a.attr_name, pav.attr_value
+        from pms_attr_group ag
+        left join pms_attr_attrgroup_relation aar on aar.attr_group_id = ag.attr_group_id
+        left join pms_attr a on a.attr_id = aar.attr_id
+        left join pms_product_attr_value pav on pav.attr_id = a.attr_id
+        where ag.catelog_id = #{catalogId} and pav.spu_id = #{spuId}
+    </select>
 
 
 </mapper>

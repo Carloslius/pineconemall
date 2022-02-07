@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.Query;
 
@@ -26,7 +27,7 @@ import plus.carlosliu.pineconemall.product.entity.AttrGroupEntity;
 import plus.carlosliu.pineconemall.product.service.AttrAttrgroupRelationService;
 import plus.carlosliu.pineconemall.product.vo.AttrGroupRespVo;
 
-
+@Transactional
 @Service("attrAttrgroupRelationService")
 public class AttrAttrgroupRelationServiceImpl extends ServiceImpl<AttrAttrgroupRelationDao, AttrAttrgroupRelationEntity> implements AttrAttrgroupRelationService {
 

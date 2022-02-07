@@ -3,7 +3,7 @@ spring:
         type: com.alibaba.druid.pool.DruidDataSource
         druid:
             driver-class-name: com.mysql.cj.jdbc.Driver
-            url: jdbc:mysql://101.35.192.127:3306/pineconemall_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+            url: jdbc:mysql://39.103.189.107:3306/pineconemall_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
             username: root
             password: s300056.
             initial-size: 10

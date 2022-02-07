@@ -3,6 +3,7 @@ package plus.carlosliu.pineconemall.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.pineconemall.product.entity.CategoryEntity;
+import plus.carlosliu.pineconemall.product.vo.web.CatelogMidVo;
 
 import java.util.List;
 import java.util.Map;
@@ -44,5 +45,18 @@ public interface CategoryService extends IService<CategoryEntity> {
      */
     Long[] findCatelogPath(Long catelogId);
 
+
+
+    /**
+     * 首页显示：查询所有的一级分类
+     * @return 所有的一级分类
+     */
+    List<CategoryEntity> getTopLevelCategories();
+
+    /**
+     * 查出所有分类，按照要求组织
+     * @return 查出所有分类，按照要求组织
+     */
+    Map<String, List<CatelogMidVo>> getCatalogJson();
 }
 

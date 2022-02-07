@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pineconemall-search
+  cloud:
+    nacos:
+      config:
+        server-addr: 39.103.189.107:8848
+        file-extension: yaml
+        namespace: 97017844-0a4e-4b22-bef8-e4661c38d369
+        extension-configs[0]:
+          data-id: base.yaml
+          group: dev
+          refresh: true

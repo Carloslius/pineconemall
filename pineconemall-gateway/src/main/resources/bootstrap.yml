@@ -1,11 +1,12 @@
-server:
-  port: 88
-
 spring:
   application:
     name: pineconemall-gateway
   cloud:
     nacos:
       config:
-        server-addr: 127.0.0.1:8848
-        namespace: 37d59043-b722-455e-bc26-25dbf0fc012b
+        server-addr: 39.103.189.107:8848
+        namespace: 58daeceb-aa73-4dd6-a733-3b7d4be0f0c3
+        extension-configs[0]:
+            data-id: base.yaml
+            group: dev
+            refresh: true

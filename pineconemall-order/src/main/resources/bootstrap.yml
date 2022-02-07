@@ -1,0 +1,22 @@
+spring:
+  application:
+   name: pineconemall-order
+  cloud:
+    nacos:
+      config:
+        server-addr: 39.103.189.107:8848
+        file-extension: yaml
+        namespace: ee151637-bf0a-4d7a-b37d-b75f3e63d857
+        group: dev
+        extension-configs[0]:
+          data-id: datasource.yaml
+          group: dev
+          refresh: true
+        extension-configs[1]:
+          data-id: mybatis.yaml
+          group: dev
+          refresh: true
+        extension-configs[2]:
+          data-id: base.yaml
+          group: dev
+          refresh: true

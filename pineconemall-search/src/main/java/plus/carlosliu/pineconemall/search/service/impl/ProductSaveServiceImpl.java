@@ -2,6 +2,7 @@ package plus.carlosliu.pineconemall.search.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
+import org.elasticsearch.action.bulk.BulkItemResponse;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.index.IndexRequest;
@@ -9,10 +10,10 @@ import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import plus.carlosliu.common.to.es.SkuEsModel;
 import plus.carlosliu.pineconemall.search.config.PineconemallElasticSearchConfig;
 import plus.carlosliu.pineconemall.search.constant.EsConstant;
 import plus.carlosliu.pineconemall.search.service.ProductSaveService;
+import plus.carlosliu.pineconemall.search.to.es.SkuEsModel;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -44,11 +45,8 @@ public class ProductSaveServiceImpl implements ProductSaveService {
         }
         BulkResponse bulkItemResponses = restHighLevelClient.bulk(bulkRequest, PineconemallElasticSearchConfig.COMMON_OPTIONS);
 
-        List<String> collect = Arrays.stream(bulkItemResponses.getItems()).map(item -> {
-            return item.getId();
-        }).collect(Collectors.toList());
-        log.info(
-                "商品上架完成:{}", collect);
+        List<String> upItemIds = Arrays.stream(bulkItemResponses.getItems()).map(BulkItemResponse::getId).collect(Collectors.toList());
+        log.info("商品上架完成:{}", upItemIds);
         return !bulkItemResponses.hasFailures();
     }
 }

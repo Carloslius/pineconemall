@@ -8,14 +8,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pineconemall-thrid-party" />
         <module name="pineconemall-coupon" />
         <module name="pineconemall-ware" />
+        <module name="pineconemall-third-party" />
         <module name="pineconemall-order" />
         <module name="pineconemall-search" />
         <module name="pineconemall-common" />
         <module name="renren-fast" />
         <module name="pineconemall-gateway" />
+        <module name="pineconemall-auth-server" />
         <module name="pineconemall-member" />
         <module name="renren-generator" />
         <module name="pineconemall-product" />
@@ -23,6 +24,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="pineconemall" target="1.5" />
+      <module name="pineconemall-auth-server" target="1.8" />
       <module name="pineconemall-common" target="8" />
       <module name="pineconemall-coupon" target="1.8" />
       <module name="pineconemall-gateway" target="1.8" />
@@ -30,7 +32,7 @@
       <module name="pineconemall-order" target="1.8" />
       <module name="pineconemall-product" target="1.8" />
       <module name="pineconemall-search" target="1.8" />
-      <module name="pineconemall-thrid-party" target="1.8" />
+      <module name="pineconemall-third-party" target="1.8" />
       <module name="pineconemall-ware" target="1.8" />
       <module name="renren-fast" target="1.8" />
       <module name="renren-fast (1)" target="1.8" />
@@ -39,13 +41,14 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="pineconemall-auth-server" options="-parameters" />
       <module name="pineconemall-coupon" options="-parameters" />
       <module name="pineconemall-gateway" options="-parameters" />
       <module name="pineconemall-member" options="-parameters" />
       <module name="pineconemall-order" options="-parameters" />
       <module name="pineconemall-product" options="-parameters" />
       <module name="pineconemall-search" options="-parameters" />
-      <module name="pineconemall-thrid-party" options="-parameters" />
+      <module name="pineconemall-third-party" options="-parameters" />
       <module name="pineconemall-ware" options="-parameters" />
       <module name="renren-fast" options="-parameters" />
       <module name="renren-fast (1)" options="-parameters" />

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: pineconemall-auth-server
+  cloud:
+    nacos:
+      config:
+        server-addr: 39.103.189.107:8848
+        file-extension: yaml
+        namespace: 99ead74a-c90c-4f2e-a192-8e0fda4c6c5f
+        group: dev
+        extension-configs[0]:
+          data-id: base.yaml
+          group: dev
+          refresh: true
+        extension-configs[1]:
+          data-id: other.yaml
+          group: dev
+          refresh: true

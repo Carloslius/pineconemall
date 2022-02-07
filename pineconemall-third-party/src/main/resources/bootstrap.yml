@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: pineconemall-third-party
+  cloud:
+    nacos:
+      config:
+        server-addr: 39.103.189.107:8848
+        file-extension: yaml
+        namespace: a141a58d-9a98-4759-ad66-d27ff56e3269
+        extension-configs[0]:
+          data-id: base.yaml
+          group: dev
+          refresh: true
+        extension-configs[1]:
+          data-id: oss.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+        extension-configs[2]:
+          data-id: sms.yaml
+          group: DEFAULT_GROUP
+          refresh: true

@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import plus.carlosliu.common.to.SkuHasStockTo;
 import plus.carlosliu.common.utils.PageUtils;
@@ -22,7 +23,7 @@ import plus.carlosliu.pineconemall.ware.entity.WareSkuEntity;
 import plus.carlosliu.pineconemall.ware.feign.ProductFeignService;
 import plus.carlosliu.pineconemall.ware.service.WareSkuService;
 
-
+@Transactional
 @Service("wareSkuService")
 public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> implements WareSkuService {
 

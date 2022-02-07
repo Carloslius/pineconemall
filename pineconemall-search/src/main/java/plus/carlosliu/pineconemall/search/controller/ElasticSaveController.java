@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import plus.carlosliu.common.exception.BizCodeEnume;
-import plus.carlosliu.common.to.es.SkuEsModel;
-import plus.carlosliu.common.utils.R;
+import plus.carlosliu.pineconemall.search.exception.BizCodeEnume;
 import plus.carlosliu.pineconemall.search.service.ProductSaveService;
+import plus.carlosliu.pineconemall.search.to.es.SkuEsModel;
+import plus.carlosliu.pineconemall.search.utils.R;
 
 import java.util.List;
 

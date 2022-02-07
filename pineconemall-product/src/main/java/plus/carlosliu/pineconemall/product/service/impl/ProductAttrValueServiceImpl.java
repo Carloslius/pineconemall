@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.Query;
 
@@ -17,7 +18,7 @@ import plus.carlosliu.pineconemall.product.dao.ProductAttrValueDao;
 import plus.carlosliu.pineconemall.product.entity.ProductAttrValueEntity;
 import plus.carlosliu.pineconemall.product.service.ProductAttrValueService;
 
-
+@Transactional
 @Service("productAttrValueService")
 public class ProductAttrValueServiceImpl extends ServiceImpl<ProductAttrValueDao, ProductAttrValueEntity> implements ProductAttrValueService {
 

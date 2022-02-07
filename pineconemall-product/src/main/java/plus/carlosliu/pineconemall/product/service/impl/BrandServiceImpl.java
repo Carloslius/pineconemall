@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import plus.carlosliu.common.constant.ProductConstant;
 import plus.carlosliu.common.utils.PageUtils;
@@ -23,7 +24,7 @@ import plus.carlosliu.pineconemall.product.entity.BrandEntity;
 import plus.carlosliu.pineconemall.product.service.BrandService;
 import plus.carlosliu.pineconemall.product.service.CategoryBrandRelationService;
 
-
+@Transactional
 @Service("brandService")
 public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> implements BrandService {
 

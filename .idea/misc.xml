@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/renren-fast/pom.xml" />
         <option value="$PROJECT_DIR$/pineconemall-thrid-party/pom.xml" />
         <option value="$PROJECT_DIR$/pineconemall-search/pom.xml" />
+        <option value="$PROJECT_DIR$/pineconemall-third-party/pom.xml" />
+        <option value="$PROJECT_DIR$/pineconemall-auth-server/pom.xml" />
       </list>
     </option>
   </component>

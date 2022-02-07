@@ -1,9 +1,10 @@
-spring:
-  application:
-    name: pineconemall-search
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-server:
-  port: 12000
+#server:
+#  port: 12000
+
+#spring:
+#  application:
+#    name: pineconemall-search
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 39.103.189.107:8848

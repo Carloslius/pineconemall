@@ -3,6 +3,7 @@ package plus.carlosliu.pineconemall.product.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import plus.carlosliu.common.constant.ProductConstant;
 import plus.carlosliu.common.utils.PageUtils;
@@ -31,7 +33,7 @@ import plus.carlosliu.pineconemall.product.service.AttrService;
 import plus.carlosliu.pineconemall.product.vo.AttrRespVo;
 import plus.carlosliu.pineconemall.product.vo.AttrVo;
 
-
+@Transactional
 @Service("attrService")
 public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements AttrService {
 
@@ -114,6 +116,7 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
         }
     }
 
+    @Cacheable(value = "attr", key = "'attrInfo:' + #root.args[0]")
     @Override
     public AttrRespVo getDetailById(Long attrId) {
         AttrRespVo attrRespVo = new AttrRespVo();

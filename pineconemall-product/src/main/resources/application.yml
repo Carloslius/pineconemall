@@ -1,27 +1,53 @@
-server:
-  port: 10000
-
 spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://101.35.192.127:3306/pineconemall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC
-    username: root
-    password: s300056.
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
+  cache:
+    type: redis
+    redis:
+      time-to-live: 3600000 #ms
+      #key-prefix: CACHE_ #指定了前缀就使用指定的，如果没有就默认使用缓存的名字作为前缀
+      #use-key-prefix: false #不使用缓存的名字作为前缀
+      cache-null-values: true #是否缓存空值，防止缓存穿透，一定要用
+  session:
+    store-type: redis
+server:
+  servlet:
+    session:
+      timeout: 60m
 
-mybatis-plus:
-  mapper-locations: classpath:/mapper/**/*.xml
-  global-config:
-    db-config:
-      id-type: auto
-      logic-delete-value: 1
-      logic-not-delete-value: 0
-logging:
-  level:
-    plus.carlosliu.pineconemall: debug
+pineconemall:
+  thread:
+    core-pool-size: 20
+    max-pool-size: 200
+    keep-alive-time: 10
+
+
+#server:
+#  port: 10000
+
+#spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 39.103.189.107:8848
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://39.103.189.107:3306/pineconemall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC
+#    username: root
+#    password: s300056.
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+#  thymeleaf:
+#    cache: false
+#  redis:
+#    host: 39.103.189.107
+
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
+#      logic-delete-value: 1
+#      logic-not-delete-value: 0
+#logging:
+#  level:
+#    plus.carlosliu.pineconemall: error

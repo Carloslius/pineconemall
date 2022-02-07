@@ -8,6 +8,7 @@ import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.Query;
@@ -17,7 +18,7 @@ import plus.carlosliu.pineconemall.ware.entity.PurchaseDetailEntity;
 import plus.carlosliu.pineconemall.ware.entity.WareSkuEntity;
 import plus.carlosliu.pineconemall.ware.service.PurchaseDetailService;
 
-
+@Transactional
 @Service("purchaseDetailService")
 public class PurchaseDetailServiceImpl extends ServiceImpl<PurchaseDetailDao, PurchaseDetailEntity> implements PurchaseDetailService {
 

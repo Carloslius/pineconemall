@@ -3,8 +3,8 @@ package plus.carlosliu.pineconemall.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.pineconemall.product.entity.AttrAttrgroupRelationEntity;
-import plus.carlosliu.pineconemall.product.entity.AttrEntity;
 import plus.carlosliu.pineconemall.product.entity.AttrGroupEntity;
+import plus.carlosliu.pineconemall.product.vo.web.SkuItemVo;
 
 import java.util.List;
 import java.util.Map;
@@ -39,5 +39,13 @@ public interface AttrGroupService extends IService<AttrGroupEntity> {
      * @param attrGroupIds 分组id
      */
     void removeCascadeByIds(List<Long> attrGroupIds);
+
+    /**
+     * 查出当前spu对应的所有属性的分组信息，以及当前分组下的所有属性对应的值
+     * @param spuId spuId
+     * @param catalogId
+     * @return 当前spu对应的所有属性的分组信息，以及当前分组下的所有属性对应的值
+     */
+    List<SkuItemVo.SpuItemAttrGroupVo> getAttrGroupWithAttrsBySpuId(Long spuId, Long catalogId);
 }
 

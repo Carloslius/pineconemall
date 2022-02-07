@@ -3,9 +3,11 @@ package plus.carlosliu.pineconemall.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.pineconemall.product.entity.SkuInfoEntity;
+import plus.carlosliu.pineconemall.product.vo.web.SkuItemVo;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 /**
  * sku信息
@@ -31,5 +33,12 @@ public interface SkuInfoService extends IService<SkuInfoEntity> {
      * @return 所有sku信息
      */
     List<SkuInfoEntity> getSkusBySpuId(Long spuId);
+
+    /**
+     * 查询sku详细信息
+     * @param skuId 要查询的skuId
+     * @return sku详细信息
+     */
+    SkuItemVo item(Long skuId) throws ExecutionException, InterruptedException;
 }
 

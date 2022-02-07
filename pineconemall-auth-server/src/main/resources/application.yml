@@ -1,0 +1,15 @@
+ribbon:
+  eager-load:
+    enabled: true
+    clients:
+      - pineconemall-member
+      - pineconemall-third-party
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+spring:
+  session:
+    store-type: redis
+server:
+  servlet:
+    session:
+      timeout: 60m
