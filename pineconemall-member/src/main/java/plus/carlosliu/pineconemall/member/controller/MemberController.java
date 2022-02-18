@@ -145,7 +145,7 @@ public class MemberController {
      * @return 成功
      */
     @PostMapping("/oauthLogin")
-    public R oauthLogin(@RequestBody SocialUserTo socialUserTo) throws Exception {
+    public R oauthLogin(@RequestBody SocialUserTo socialUserTo){
         try {
             MemberEntity member = memberService.oauthLogin(socialUserTo);
             return R.ok().setData(member);
@@ -153,7 +153,11 @@ public class MemberController {
             return R.error(BizCodeEnume.LOGINACCT_INVALID_EXCEPTION.getCode(), BizCodeEnume.LOGINACCT_INVALID_EXCEPTION.getMsg());
         }catch (LoginPwdException e){
             return R.error(BizCodeEnume.LOGINPWD_INVALID_EXCEPTION.getCode(), BizCodeEnume.LOGINPWD_INVALID_EXCEPTION.getMsg());
+        }catch (Exception e) {
+            e.printStackTrace();
+            return R.error();
         }
     }
+
 
 }

@@ -18,6 +18,7 @@ import plus.carlosliu.common.constant.ProductConstant;
 import plus.carlosliu.common.to.SkuHasStockTo;
 import plus.carlosliu.common.to.SkuReductionTo;
 import plus.carlosliu.common.to.SpuBoundTo;
+import plus.carlosliu.common.to.SpuInfoTo;
 import plus.carlosliu.common.to.es.SkuEsModel;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.Query;
@@ -27,6 +28,7 @@ import plus.carlosliu.pineconemall.product.dao.SpuInfoDao;
 import plus.carlosliu.pineconemall.product.entity.*;
 import plus.carlosliu.pineconemall.product.feign.CouponFeignService;
 import plus.carlosliu.pineconemall.product.feign.SearchFeignService;
+import plus.carlosliu.pineconemall.product.feign.SecKillFeignService;
 import plus.carlosliu.pineconemall.product.feign.WareFeignService;
 import plus.carlosliu.pineconemall.product.service.*;
 import plus.carlosliu.pineconemall.product.vo.*;
@@ -73,6 +75,8 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     }
 
     // TODO：高级部分完善失败情况
+    // Seata AT分布式事务
+    //@GlobalTransactional
     @Override
     public void saveSpuInfo(SpuSaveVo spuSaveVo) {
         // 1、保存spu基本信息 pms_spu_info
@@ -282,6 +286,18 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
             // 远程调用失败
             // TODO：重复调用？接口幂等性：重试机制？
         }
+    }
+
+    @Override
+    public SpuInfoTo getSpuBySkuId(Long skuId) {
+        SpuInfoTo spuInfoTo = new SpuInfoTo();
+        SkuInfoEntity skuInfo = skuInfoService.getById(skuId);
+        SpuInfoEntity spuInfo = baseMapper.selectById(skuInfo.getSpuId());
+        // 查询品牌名称
+        BrandEntity brand = brandService.getById(spuInfo.getBrandId());
+        BeanUtils.copyProperties(spuInfo, spuInfoTo);
+        spuInfoTo.setBrandName(brand.getName());
+        return spuInfoTo;
     }
 
 }

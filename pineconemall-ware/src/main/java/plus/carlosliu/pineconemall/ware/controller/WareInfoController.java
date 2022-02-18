@@ -1,5 +1,6 @@
 package plus.carlosliu.pineconemall.ware.controller;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -11,7 +12,7 @@ import plus.carlosliu.pineconemall.ware.entity.WareInfoEntity;
 import plus.carlosliu.pineconemall.ware.service.WareInfoService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.R;
-
+import plus.carlosliu.pineconemall.ware.vo.FareVo;
 
 
 /**
@@ -81,6 +82,17 @@ public class WareInfoController {
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wareInfoService.queryPageByCondition(params);
         return R.ok().put("page", page);
+    }
+
+    /**
+     * 根据收货地址获取运费
+     * @param addrId 地址
+     * @return 运费，和对应的地址信息
+     */
+    @GetMapping("/fare")
+    public R getFare(@RequestParam("addrId") Long addrId){
+        FareVo fare = wareInfoService.getFare(addrId);
+        return R.ok().setData(fare);
     }
 
 }

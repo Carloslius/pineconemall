@@ -1,10 +1,16 @@
-#server:
-#  port: 12000
+ribbon:
+  eager-load:
+    enabled: true
+    clients:
+      - pineconemall-product
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 
-#spring:
-#  application:
-#    name: pineconemall-search
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 39.103.189.107:8848
+spring:
+  session:
+    store-type: redis
+# 设置session过期时间，十分钟
+server:
+  servlet:
+    session:
+      timeout: 600

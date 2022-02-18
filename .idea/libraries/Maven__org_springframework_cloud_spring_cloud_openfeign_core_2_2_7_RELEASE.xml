@@ -8,6 +8,8 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../maven/repository/org/springframework/cloud/spring-cloud-openfeign-core/2.2.7.RELEASE/spring-cloud-openfeign-core-2.2.7.RELEASE-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-release-vHoxton.SR10/train-docs/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-release-vHoxton.SR10/train-docs/src/test/java" />
     </SOURCES>
   </library>
 </component>

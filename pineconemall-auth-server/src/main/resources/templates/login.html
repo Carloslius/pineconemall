@@ -40,7 +40,7 @@
             <h2 class="btn1">账户登录</h2>
         </div>
         <div id="error" class="error" style="color:red;margin-left: 45px" >
-            请输入账户名和密码
+            [[${session.orderMsg!=null?session.orderMsg:''}]]<!--请输入账户名和密码-->
         </div>
         <div class="si_bom tab">
             <img src="/static/login/JD_img/show.png" class="bom_1"/>
@@ -76,9 +76,8 @@
         <div class="si_out">
             <ul>
                 <li>
-                    <a href="/static/login/#">
-                        <img src="/static/login/JD_img/qq.png"/>
-                        <span>QQ</span>
+                    <a href="https://api.weibo.com/oauth2/authorize?client_id=1962528733&response_type=code&redirect_uri=http://auth.pineconemall.com/oauth2/weibo/success">
+                        <img style="width: 50px; height: 17px" src="/static/login/JD_img/weibo.png"/>
                     </a>
                 </li>
                 <li class="f4"> |</li>

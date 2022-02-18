@@ -1,0 +1,26 @@
+spring:
+  application:
+   name: pineconemall-seckill
+  cloud:
+    nacos:
+      config:
+        server-addr: 39.103.189.107:8848
+        file-extension: yaml
+        namespace: 08c1548c-3707-4490-ba80-389907582c85
+        group: dev
+        extension-configs[0]:
+          data-id: base.yaml
+          group: dev
+          refresh: true
+        extension-configs[1]:
+          data-id: other.yaml
+          group: dev
+          refresh: true
+        extension-configs[2]:
+          data-id: sentinel.properties
+          group: dev
+          refresh: true
+        extension-configs[3]:
+          data-id: sleuth-zipkin.yaml
+          group: dev
+          refresh: true

@@ -1,6 +1,7 @@
 package plus.carlosliu.pineconemall.coupon.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -85,6 +86,13 @@ public class SeckillSessionController {
 		seckillSessionService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
+    }
+
+
+    @RequestMapping("/getSecKillSessionsIn3Days")
+    public R getSecKillSessionsIn3Days(){
+        List<SeckillSessionEntity> sessionEntityList =  seckillSessionService.getSecKillSessionsIn3Days();
+        return R.ok().setData(sessionEntityList);
     }
 
 }

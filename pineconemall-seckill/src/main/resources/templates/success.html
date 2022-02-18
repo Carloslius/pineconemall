@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="http://cart.pineconemall.com/static/cart/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://cart.pineconemall.com/static/cart/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://cart.pineconemall.com/static/cart/js/swiper.min.js"></script>
+    <script src="http://cart.pineconemall.com/static/cart/js/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cart.pineconemall.com/static/cart/css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cart.pineconemall.com/static/cart/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cart.pineconemall.com/static/cart/css/success.css"/>
+
+</head>
+
+<body>
+<!--头部-->
+<div class="alert-info">
+    <div class="hd_wrap_top">
+        <ul class="hd_wrap_left">
+            <li class="hd_home"><i class="glyphicon glyphicon-home"></i>
+                <a href="http://pineconemall.com">谷粒商城首页</a>
+            </li>
+
+        </ul>
+
+        <ul class="hd_wrap_right">
+            <li>
+                <a href="http://auth.pineconemall.com/login.html" th:if="${session.loginUser==null}" >您好，请登录！</a>
+                <a id="a_nickname" th:if="${session.loginUser!=null}" th:text="|欢迎 ${session.loginUser.nickname}|" ></a>
+            </li>
+            <li class="spacer" th:if="${session.loginUser==null}"></li>
+
+            <li>
+            <li>
+                <a th:if="${session.loginUser==null}" href="http://auth.pineconemall.com/register.html" class="li_2">免费注册</a>
+            </li>
+            <li class="spacer"></li>
+
+            <li>
+                <a href="http://cart.pineconemall.com/static/cart/javascript:;">我的订单</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+</div>
+
+<div class="nav-tabs-justified">
+    <div class="nav_wrap">
+
+        <div class="nav_top">
+            <div class="nav_top_one">
+                <a href="http://pineconemall.com"><img src="http://cart.pineconemall.com/static/cart/img/logo1.jpg" style="height: 60px;width:180px;"/></a>
+            </div>
+            <div class="nav_top_two"><input type="text"/>
+                <button>搜索</button>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="success-wrap">
+        <div class="w" id="result">
+            <div class="m succeed-box">
+                <div class="mc success-cont">
+                    <div class="success-lcol">
+                        <div class="success-top"><b class="succ-icon"></b>
+                            <h3 class="ftx-02" th:if="${orderSn == null}">手气欠佳，秒杀失败，请下次再来！</h3>
+                            <h3 class="ftx-02" th:if="${orderSn != null}">恭喜，秒杀成功，订单号[[${orderSn}]] 正在准备订单数据，10s以后自动跳转支付页
+                                <a th:href="'http://order.pineconemall.com/aliPayOrder?type=seckill&orderSn='+${orderSn}">去支付</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+    <script type="text/javascript" src="http://cart.pineconemall.com/static/cart/js/success.js"></script>
+    <script>
+        setInterval("myInterval()",10000);//1000为1秒钟
+        function myInterval() {
+            let orderSn = [[${orderSn}]];
+            console.log(orderSn);
+            window.location.href="http://order.pineconemall.com/aliPayOrder?type=seckill&orderSn="+orderSn;
+        }
+    </script>
+</html>

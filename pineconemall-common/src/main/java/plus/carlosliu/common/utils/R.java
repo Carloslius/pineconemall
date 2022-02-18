@@ -23,6 +23,12 @@ import java.util.Map;
 public class R extends HashMap<String, Object> {
 	private static final long serialVersionUID = 1L;
 
+	public <T> T getData(String key, TypeReference<T> typeReference){
+		Object data = get(key);//默认是map
+		String s = JSON.toJSONString(data);
+		T t = JSON.parseObject(s, typeReference);
+		return t;
+	}
 	public <T> T getData(TypeReference<T> typeReference){
 		Object data = get("data");//默认是map
 		String s = JSON.toJSONString(data);
@@ -30,6 +36,10 @@ public class R extends HashMap<String, Object> {
 		return t;
 	}
 
+	public R setData(String key, Object data){
+		put(key, data);
+		return this;
+	}
 	public R setData(Object data){
 		put("data", data);
 		return this;

@@ -16,5 +16,12 @@ import java.util.Map;
 public interface SeckillSkuRelationService extends IService<SeckillSkuRelationEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 根据场次id查询该场次所有商品
+     * @param params 分页参数和场次id
+     * @return 分页数据
+     */
+    PageUtils queryPageBySessionId(Map<String, Object> params);
 }
 

@@ -92,8 +92,8 @@ public class ThreadTest {
 //        }, executor);
         /**
          * 两个都完成，才执行任务3
-         *      future1.runAfterEitherAsync(future2, , executor);
-         *      future1.thenAcceptBoth(future2, (f1, f2) -> {}, executor);
+         *      future1.runAfterBothAsync(future2, , executor);
+         *      future1.thenAcceptBothAsync(future2, (f1, f2) -> {}, executor);
          */
 //        String s = future1.thenCombineAsync(future2, (f1, f2) -> {
 //            System.out.println("任务3开始...");
@@ -101,7 +101,7 @@ public class ThreadTest {
 //        }, executor).get();
         /**
          * 两个中只要有一个完成，就执行任务3
-         *      future1.runAfterBoth(future2, , executor);
+         *      future1.runAfterEitherAsync(future2, , executor);
          *      future1.acceptEitherAsync(future2, res -> {}, executor);
          */
 //        CompletableFuture<String> future = future1.applyToEitherAsync(future2, res -> {

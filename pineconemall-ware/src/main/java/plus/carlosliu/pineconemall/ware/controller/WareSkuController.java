@@ -10,12 +10,15 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import plus.carlosliu.common.exception.BizCodeEnume;
+import plus.carlosliu.common.exception.NoStockException;
 import plus.carlosliu.common.to.SkuHasStockTo;
 import plus.carlosliu.pineconemall.ware.entity.WareSkuEntity;
 import plus.carlosliu.pineconemall.ware.service.WareSkuService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.R;
-
+import plus.carlosliu.pineconemall.ware.to.LockStockResultTo;
+import plus.carlosliu.pineconemall.ware.to.WareSkuLockTo;
 
 
 /**
@@ -88,7 +91,7 @@ public class WareSkuController {
     }
 
     /**
-     * 查询sku是否有库存，上架功能远程调用
+     * 查询sku是否有库存，上架功能远程调用，订单业务远程调用
      */
     @PostMapping("/hasStock")
     public Map<Long, Boolean> getSkuHasStock(@RequestBody List<Long> skuIds){
@@ -99,6 +102,16 @@ public class WareSkuController {
             return true;
         }).collect(Collectors.toList());
         return map;
+    }
+
+    @PostMapping("/lock/order")
+    public R orderLockStock(@RequestBody WareSkuLockTo wareSkuLockTo){
+        try {
+            wareSkuService.orderLockStock(wareSkuLockTo);
+            return R.ok();
+        }catch (NoStockException e){
+            return R.error(BizCodeEnume.NO_STOCK_EXCEPTION.getCode(), BizCodeEnume.NO_STOCK_EXCEPTION.getMsg());
+        }
     }
 
 }

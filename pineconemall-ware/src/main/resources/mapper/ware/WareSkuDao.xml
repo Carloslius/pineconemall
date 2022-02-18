@@ -22,4 +22,18 @@
         select sum(stock-stock_locked) from wms_ware_sku where sku_id = #{skuId}
     </select>
 
+    <select id="listWareIdsHasStock" resultType="java.lang.Long">
+        select ware_id from wms_ware_sku where sku_id = #{skuId} and stock - stock_locked >= #{count}
+    </select>
+
+    <update id="lockWareSku">
+        update wms_ware_sku set stock_locked = stock_locked + #{num}
+        where sku_id = #{skuId} and ware_id = #{wareId} and stock - stock_locked >= #{num}
+    </update>
+
+    <update id="unLockStock">
+        update wms_ware_sku set stock_locked = stock_locked - #{num}
+        where sku_id = #{skuId} and ware_id = #{wareId}
+    </update>
+
 </mapper>

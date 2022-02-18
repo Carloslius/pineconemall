@@ -1,6 +1,7 @@
 package plus.carlosliu.pineconemall.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import plus.carlosliu.common.to.SpuInfoTo;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.pineconemall.product.entity.SpuInfoEntity;
 import plus.carlosliu.pineconemall.product.vo.SpuSaveVo;
@@ -36,5 +37,12 @@ public interface SpuInfoService extends IService<SpuInfoEntity> {
      * @param spuId 上架的商品(spu)id
      */
     void up(Long spuId);
+
+    /**
+     * 根据skuId查询所属的spu
+     * @param skuId skuId
+     * @return spu信息
+     */
+    SpuInfoTo getSpuBySkuId(Long skuId);
 }
 

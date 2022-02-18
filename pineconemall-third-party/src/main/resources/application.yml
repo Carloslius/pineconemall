@@ -1,8 +1,13 @@
-#server:
-#  port: 30000
-#
 #spring:
 #  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 39.103.189.107:8848
+#    alicloud:
+#      access-key:
+#      secret-key:
+#      oss:
+#        endpoint: oss-cn-zhangjiakou.aliyuncs.com
+#      sms:
+#        host: https://gyytz.market.alicloudapi.com
+#        path:
+#        appcode:
+#        sms-sign-id:
+#        template-id:

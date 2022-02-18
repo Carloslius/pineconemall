@@ -8,46 +8,26 @@ spring:
       cache-null-values: true #是否缓存空值，防止缓存穿透，一定要用
   session:
     store-type: redis
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients:
+      - pineconemall-coupon
+      - pineconemall-search
+      - pineconemall-seckill
+      - pineconemall-ware
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+# 设置session过期时间，十分钟
 server:
   servlet:
     session:
-      timeout: 60m
+      timeout: 600
 
 pineconemall:
   thread:
     core-pool-size: 20
     max-pool-size: 200
     keep-alive-time: 10
-
-
-#server:
-#  port: 10000
-
-#spring:
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 39.103.189.107:8848
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://39.103.189.107:3306/pineconemall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC
-#    username: root
-#    password: s300056.
-#  jackson:
-#    date-format: yyyy-MM-dd HH:mm:ss
-#    time-zone: GMT+8
-#  thymeleaf:
-#    cache: false
-#  redis:
-#    host: 39.103.189.107
-
-#mybatis-plus:
-#  mapper-locations: classpath:/mapper/**/*.xml
-#  global-config:
-#    db-config:
-#      id-type: auto
-#      logic-delete-value: 1
-#      logic-not-delete-value: 0
-#logging:
-#  level:
-#    plus.carlosliu.pineconemall: error

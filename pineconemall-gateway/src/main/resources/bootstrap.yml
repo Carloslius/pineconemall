@@ -7,6 +7,14 @@ spring:
         server-addr: 39.103.189.107:8848
         namespace: 58daeceb-aa73-4dd6-a733-3b7d4be0f0c3
         extension-configs[0]:
-            data-id: base.yaml
-            group: dev
-            refresh: true
+          data-id: base.yaml
+          group: dev
+          refresh: true
+        extension-configs[1]:
+          data-id: sentinel.properties
+          group: dev
+          refresh: true
+        extension-configs[2]:
+          data-id: sleuth-zipkin.yaml
+          group: dev
+          refresh: true

@@ -32,18 +32,6 @@ public class SeckillSkuRelationController {
     private SeckillSkuRelationService seckillSkuRelationService;
 
     /**
-     * 列表
-     */
-    @RequestMapping("/list")
-    //@RequiresPermissions("coupon:seckillskurelation:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = seckillSkuRelationService.queryPage(params);
-
-        return R.ok().put("page", page);
-    }
-
-
-    /**
      * 信息
      */
     @RequestMapping("/info/{id}")
@@ -87,4 +75,13 @@ public class SeckillSkuRelationController {
         return R.ok();
     }
 
+
+    /**
+     * 根据场次id查询该场次所有商品
+     */
+    @RequestMapping("/list")
+    public R list(@RequestParam Map<String, Object> params){
+        PageUtils page = seckillSkuRelationService.queryPageBySessionId(params);
+        return R.ok().put("page", page);
+    }
 }

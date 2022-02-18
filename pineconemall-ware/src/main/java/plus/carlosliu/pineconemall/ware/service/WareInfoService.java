@@ -3,7 +3,9 @@ package plus.carlosliu.pineconemall.ware.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.pineconemall.ware.entity.WareInfoEntity;
+import plus.carlosliu.pineconemall.ware.vo.FareVo;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
 /**
@@ -23,5 +25,12 @@ public interface WareInfoService extends IService<WareInfoEntity> {
      * @return 分页数据
      */
     PageUtils queryPageByCondition(Map<String, Object> params);
+
+    /**
+     * 根据收货地址获取运费
+     * @param addrId 地址
+     * @return 运费，和对应的地址信息
+     */
+    FareVo getFare(Long addrId);
 }
 

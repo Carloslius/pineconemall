@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/pineconemall.iml" filepath="$PROJECT_DIR$/.idea/pineconemall.iml" />
       <module fileurl="file://$PROJECT_DIR$/pineconemall-auth-server/pineconemall-auth-server.iml" filepath="$PROJECT_DIR$/pineconemall-auth-server/pineconemall-auth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pineconemall-cart/pineconemall-cart.iml" filepath="$PROJECT_DIR$/pineconemall-cart/pineconemall-cart.iml" />
       <module fileurl="file://$PROJECT_DIR$/pineconemall-common/pineconemall-common.iml" filepath="$PROJECT_DIR$/pineconemall-common/pineconemall-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/pineconemall-coupon/pineconemall-coupon.iml" filepath="$PROJECT_DIR$/pineconemall-coupon/pineconemall-coupon.iml" />
       <module fileurl="file://$PROJECT_DIR$/pineconemall-gateway/pineconemall-gateway.iml" filepath="$PROJECT_DIR$/pineconemall-gateway/pineconemall-gateway.iml" />
@@ -11,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/pineconemall-order/pineconemall-order.iml" filepath="$PROJECT_DIR$/pineconemall-order/pineconemall-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/pineconemall-product/pineconemall-product.iml" filepath="$PROJECT_DIR$/pineconemall-product/pineconemall-product.iml" />
       <module fileurl="file://$PROJECT_DIR$/pineconemall-search/pineconemall-search.iml" filepath="$PROJECT_DIR$/pineconemall-search/pineconemall-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pineconemall-seckill/pineconemall-seckill.iml" filepath="$PROJECT_DIR$/pineconemall-seckill/pineconemall-seckill.iml" />
       <module fileurl="file://$PROJECT_DIR$/pineconemall-third-party/pineconemall-third-party.iml" filepath="$PROJECT_DIR$/pineconemall-third-party/pineconemall-third-party.iml" />
       <module fileurl="file://$PROJECT_DIR$/pineconemall-ware/pineconemall-ware.iml" filepath="$PROJECT_DIR$/pineconemall-ware/pineconemall-ware.iml" />
       <module fileurl="file://$PROJECT_DIR$/renren-fast/renren-fast.iml" filepath="$PROJECT_DIR$/renren-fast/renren-fast.iml" />

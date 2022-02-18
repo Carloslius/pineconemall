@@ -19,6 +19,10 @@
         <module>renren-fast</module>
         <module>renren-generator</module>
         <module>pineconemall-common</module>
+        <module>pineconemall-auth-server</module>
+        <module>pineconemall-search</module>
+        <module>pineconemall-third-party</module>
+        <module>pineconemall-cart</module>
     </modules>
 
 </project>

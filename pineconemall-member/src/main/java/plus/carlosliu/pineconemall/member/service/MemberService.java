@@ -35,7 +35,7 @@ public interface MemberService extends IService<MemberEntity> {
 
     /**
      * 用户登录，社交认证，具有登录和注册合并功能
-     * @param socialUserTo 登录信息
+     * @param socialUserTo 登录信息 包含type认证平台
      */
     MemberEntity oauthLogin(SocialUserTo socialUserTo) throws Exception;
 }

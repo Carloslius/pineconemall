@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: pineconemall-cart
+  cloud:
+    nacos:
+      config:
+        server-addr: 39.103.189.107:8848
+        file-extension: yaml
+        namespace: 54f0cff5-ee63-4321-9b20-b31bf1535eb1
+        group: dev
+        extension-configs[0]:
+          data-id: base.yaml
+          group: dev
+          refresh: true
+        extension-configs[1]:
+          data-id: other.yaml
+          group: dev
+          refresh: true
+        extension-configs[2]:
+          data-id: sentinel.properties
+          group: dev
+          refresh: true
+        extension-configs[3]:
+          data-id: sleuth-zipkin.yaml
+          group: dev
+          refresh: true

@@ -16,3 +16,11 @@ spring:
           data-id: other.yaml
           group: dev
           refresh: true
+        extension-configs[2]:
+          data-id: sentinel.properties
+          group: dev
+          refresh: true
+        extension-configs[3]:
+          data-id: sleuth-zipkin.yaml
+          group: dev
+          refresh: true

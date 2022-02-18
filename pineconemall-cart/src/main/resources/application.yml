@@ -1,0 +1,22 @@
+ribbon:
+  eager-load:
+    enabled: true
+    clients:
+      - pineconemall-product
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+spring:
+  session:
+    store-type: redis
+# 设置session过期时间，十分钟
+server:
+  servlet:
+    session:
+      timeout: 600
+
+pineconemall:
+  thread:
+    core-pool-size: 20
+    max-pool-size: 200
+    keep-alive-time: 10

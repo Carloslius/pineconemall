@@ -1,5 +1,6 @@
 package plus.carlosliu.pineconemall.product.app;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -80,5 +81,16 @@ public class SkuInfoController {
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = skuInfoService.queryPageByCondition(params);
         return R.ok().put("page", page);
+    }
+
+    /**
+     * 根据商品id查出当前价格
+     * @param skuId 商品id
+     * @return 商品对应的当前价格
+     */
+    @GetMapping("/{skuId}/price")
+    public BigDecimal getPrice(@PathVariable("skuId") Long skuId){
+        SkuInfoEntity skuInfo = skuInfoService.getById(skuId);
+        return skuInfo.getPrice();
     }
 }

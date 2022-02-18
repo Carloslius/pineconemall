@@ -1,0 +1,25 @@
+spring:
+  rabbitmq:
+    host: 39.103.189.107
+    virtual-host: /
+    # 手工模式确认，手动ack消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+  session:
+    store-type: redis
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients:
+      - pineconemall-coupon
+      - pineconemall-product
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+# 设置session过期时间，十分钟
+server:
+  servlet:
+    session:
+      timeout: 600

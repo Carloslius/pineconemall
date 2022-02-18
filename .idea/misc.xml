@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/pineconemall-search/pom.xml" />
         <option value="$PROJECT_DIR$/pineconemall-third-party/pom.xml" />
         <option value="$PROJECT_DIR$/pineconemall-auth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/pineconemall-cart/pom.xml" />
+        <option value="$PROJECT_DIR$/pineconemall-seckill/pom.xml" />
       </list>
     </option>
   </component>

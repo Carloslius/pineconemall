@@ -31,6 +31,13 @@ spring:
           filters:
             - RewritePath=/api/?(?<segment>.*),/$\{segment}
 
+        - id: coupon-party
+          uri: lb://pineconemall-coupon
+          predicates:
+            - Path=/api/coupon/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*),/$\{segment}
+
         - id: admin-route
           uri: lb://renren-fast
           predicates :
@@ -51,3 +58,19 @@ spring:
           uri: lb://pineconemall-auth-server
           predicates:
             - Host=auth.pineconemall.com
+        - id: pineconemall-cart-route
+          uri: lb://pineconemall-cart
+          predicates:
+            - Host=cart.pineconemall.com
+        - id: pineconemall-order-route
+          uri: lb://pineconemall-order
+          predicates:
+            - Host=order.pineconemall.com
+        - id: pineconemall-order-route
+          uri: lb://pineconemall-member
+          predicates:
+            - Host=member.pineconemall.com
+        - id: pineconemall-seckill-route
+          uri: lb://pineconemall-seckill
+          predicates:
+            - Host=seckill.pineconemall.com

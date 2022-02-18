@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import plus.carlosliu.common.to.SpuInfoTo;
 import plus.carlosliu.pineconemall.product.entity.SpuInfoEntity;
 import plus.carlosliu.pineconemall.product.service.SpuInfoService;
 import plus.carlosliu.common.utils.PageUtils;
@@ -88,6 +89,17 @@ public class SpuInfoController {
     public R up(@PathVariable("spuId") Long spuId){
         spuInfoService.up(spuId);
         return R.ok();
+    }
+
+    /**
+     * 根据skuId查询所属的spu
+     * @param skuId skuId
+     * @return spu信息
+     */
+    @GetMapping("/getSpuBySkuId/{id}")
+    public R getSpuBySkuId(@PathVariable("id") Long skuId){
+        SpuInfoTo spuInfo = spuInfoService.getSpuBySkuId(skuId);
+        return R.ok().setData(spuInfo);
     }
 
 }

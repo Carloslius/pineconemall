@@ -1,5 +1,6 @@
 package plus.carlosliu.pineconemall.product.service.impl;
 
+import com.alibaba.fastjson.TypeReference;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,11 +19,14 @@ import org.springframework.util.StringUtils;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.common.utils.Query;
 
+import plus.carlosliu.common.utils.R;
 import plus.carlosliu.pineconemall.product.dao.SkuInfoDao;
 import plus.carlosliu.pineconemall.product.entity.SkuImagesEntity;
 import plus.carlosliu.pineconemall.product.entity.SkuInfoEntity;
 import plus.carlosliu.pineconemall.product.entity.SpuInfoDescEntity;
+import plus.carlosliu.pineconemall.product.feign.SecKillFeignService;
 import plus.carlosliu.pineconemall.product.service.*;
+import plus.carlosliu.pineconemall.product.to.SecKillInfoTo;
 import plus.carlosliu.pineconemall.product.vo.web.SkuItemVo;
 
 @Transactional
@@ -40,6 +44,9 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
 
     @Autowired
     private ThreadPoolExecutor executor;
+
+    @Autowired
+    private SecKillFeignService secKillFeignService;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -122,8 +129,17 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
             skuItemVo.setImages(skuImages);
         }, executor);
 
+        // 秒杀补充：查询当前sku是否参与秒杀
+        CompletableFuture<Void> secKillFuture = CompletableFuture.runAsync(() -> {
+            R r = secKillFeignService.getSecKillSkuInfo(skuId);
+            if (r.getCode() == 0) {
+                SecKillInfoTo data = r.getData(new TypeReference<SecKillInfoTo>() {});
+                skuItemVo.setSecKillInfo(data);
+            }
+        }, executor);
+
         // 等到所有任务都完成
-        CompletableFuture.allOf(saleFuture, descFuture, groupFuture, imagesFuture).get();
+        CompletableFuture.allOf(saleFuture, descFuture, groupFuture, imagesFuture, secKillFuture).get();
 
         return skuItemVo;
     }

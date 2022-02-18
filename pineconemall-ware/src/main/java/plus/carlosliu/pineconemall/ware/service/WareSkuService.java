@@ -2,8 +2,11 @@ package plus.carlosliu.pineconemall.ware.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import plus.carlosliu.common.to.SkuHasStockTo;
+import plus.carlosliu.common.to.mq.OrderTo;
+import plus.carlosliu.common.to.mq.StockLockedTo;
 import plus.carlosliu.common.utils.PageUtils;
 import plus.carlosliu.pineconemall.ware.entity.WareSkuEntity;
+import plus.carlosliu.pineconemall.ware.to.WareSkuLockTo;
 
 import java.util.List;
 import java.util.Map;
@@ -40,5 +43,23 @@ public interface WareSkuService extends IService<WareSkuEntity> {
      * @return 每个skuId对应没有没库存
      */
     List<SkuHasStockTo> getSkuHasStock(List<Long> skuIds);
+
+    /**
+     * 锁库存
+     * @param wareSkuLockTo 需要锁的库存信息
+     */
+    void orderLockStock(WareSkuLockTo wareSkuLockTo);
+
+    /**
+     * 解锁库存
+     * @param to 需要解锁的信息
+     */
+    void unLockStocks(StockLockedTo to);
+
+    /**
+     * 解锁库存，防止订单业务卡顿
+     * @param orderTo 要解锁的订单信息
+     */
+    void unlockStocks(OrderTo orderTo);
 }
 

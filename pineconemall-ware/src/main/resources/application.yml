@@ -1,28 +1,25 @@
-#server:
-#  port: 11000
-#
-#spring:
-#  application:
-#    name: pineconemall-ware
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://39.103.189.107:3306/pineconemall_wms?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC
-#    username: root
-#    password: s300056.
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 39.103.189.107:8848
-#  jackson:
-#    date-format: yyyy-MM-dd HH:mm:ss
-#    time-zone: GMT+8
-#
-#mybatis-plus:
-#  mapper-locations: classpath:/mapper/**/*.xml
-#  global-config:
-#    db-config:
-#      id-type: auto
-#
-#logging:
-#  level:
-#    plus.carlosliu: debug
+spring:
+  rabbitmq:
+    host: 39.103.189.107
+    virtual-host: /
+    # 开启发送端消息抵达broker确认
+    publisher-confirm-type: correlated
+    # 开启发送端消息抵达队列确认
+    publisher-returns: true
+    # 只要抵达队列，就以异步方式优先回调我们这个returnconfirm
+    template:
+      mandatory: true
+    # 手工模式确认，手动ack消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients:
+      - pineconemall-member
+      - pineconemall-order
+      - pineconemall-product
+  ReadTimeout: 60000
+  ConnectTimeout: 60000

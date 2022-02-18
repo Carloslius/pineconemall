@@ -1,15 +1,12 @@
 package plus.carlosliu.pineconemall.member.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import plus.carlosliu.pineconemall.member.entity.MemberReceiveAddressEntity;
 import plus.carlosliu.pineconemall.member.service.MemberReceiveAddressService;
@@ -87,4 +84,13 @@ public class MemberReceiveAddressController {
         return R.ok();
     }
 
+    /**
+     * 查询会员的收货地址
+     * @param memberId 会员id
+     * @return 会员收货地址
+     */
+    @GetMapping("/{memberId}/address")
+    public List<MemberReceiveAddressEntity> getAddress(@PathVariable("memberId") Long memberId){
+        return memberReceiveAddressService.getAddress(memberId);
+    }
 }

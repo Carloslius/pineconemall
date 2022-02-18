@@ -3,6 +3,7 @@ package plus.carlosliu.pineconemall.auth.feign;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import plus.carlosliu.pineconemall.auth.utils.R;
 import plus.carlosliu.pineconemall.auth.vo.SocialUserVo;
 import plus.carlosliu.pineconemall.auth.vo.UserLoginVo;
@@ -21,5 +22,5 @@ public interface MemberFeignService {
 
 
     @PostMapping("/member/member/oauthLogin")
-    R oauthLogin(@RequestBody SocialUserVo socialUserVo) throws Exception;
+    R oauthLogin(@RequestBody SocialUserVo socialUserVo);
 }

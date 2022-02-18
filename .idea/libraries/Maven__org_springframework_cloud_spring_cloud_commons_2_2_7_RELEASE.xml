@@ -8,6 +8,63 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/../../maven/repository/org/springframework/cloud/spring-cloud-commons/2.2.7.RELEASE/spring-cloud-commons-2.2.7.RELEASE-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-config-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/nacos-discovery-consumer-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/nacos-discovery-consumer-sclb-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/nacos-discovery-provider-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/nacos-discovery-spring-cloud-config-client-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/nacos-discovery-spring-cloud-config-server-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/nacos-reactivediscovery-consumer-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-gateway-example/nacos-gateway-discovery-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/nacos-example/nacos-gateway-example/nacos-gateway-provider-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/rocketmq-example/rocketmq-consume-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/rocketmq-example/rocketmq-produce-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/seata-example/account-service/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/seata-example/business-service/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/seata-example/order-service/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/seata-example/storage-service/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-core-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-dubbo-example/sentinel-dubbo-api/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-dubbo-example/sentinel-dubbo-consumer-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-dubbo-example/sentinel-dubbo-provider-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-feign-example/sentinel-feign-consumer-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-feign-example/sentinel-feign-provider-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-spring-cloud-gateway-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-webflux-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/sentinel-example/sentinel-zuul-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-dubbo-examples/spring-cloud-dubbo-client-sample/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-dubbo-examples/spring-cloud-dubbo-consumer-sample/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-dubbo-examples/spring-cloud-dubbo-provider-sample/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-dubbo-examples/spring-cloud-dubbo-provider-web-sample/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-dubbo-examples/spring-cloud-dubbo-sample-api/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-dubbo-examples/spring-cloud-dubbo-server-sample/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-dubbo-examples/spring-cloud-dubbo-servlet-gateway-sample/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-sidecar-examples/spring-cloud-alibaba-sidecar-consul-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-alibaba-sidecar-examples/spring-cloud-alibaba-sidecar-nacos-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-examples/spring-cloud-bus-rocketmq-example/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-alibaba-commons/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-alibaba-sentinel-datasource/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-alibaba-sentinel-datasource/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-alibaba-sentinel-gateway/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-circuitbreaker-sentinel/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-circuitbreaker-sentinel/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-nacos-config-server/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-nacos-config-server/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-nacos-config/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-nacos-config/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-nacos-discovery/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-nacos-discovery/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-seata/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-sentinel/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-sentinel/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-sidecar/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-bus-rocketmq/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-dubbo/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-dubbo/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-stream-rocketmq/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-alibaba-2.2.6.RELEASE/spring-cloud-alibaba-starters/spring-cloud-starter-stream-rocketmq/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-release-vHoxton.SR10/train-docs/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../spring-source/spring-cloud-release-vHoxton.SR10/train-docs/src/test/java" />
     </SOURCES>
   </library>
 </component>

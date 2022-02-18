@@ -4,6 +4,7 @@ import lombok.Data;
 import plus.carlosliu.pineconemall.product.entity.SkuImagesEntity;
 import plus.carlosliu.pineconemall.product.entity.SkuInfoEntity;
 import plus.carlosliu.pineconemall.product.entity.SpuInfoDescEntity;
+import plus.carlosliu.pineconemall.product.to.SecKillInfoTo;
 
 import java.util.List;
 
@@ -20,6 +21,9 @@ public class SkuItemVo {
     private SpuInfoDescEntity desc;
     // 5、获取spu的规格参数信息
     private List<SpuItemAttrGroupVo> groupAttrs;
+
+    // 6、当前商品的秒杀优惠信息
+    private SecKillInfoTo secKillInfo;
 
     private Boolean hasStock = false;
 
