@@ -7,378 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="294b2a05-aaa5-4284-b628-c5b47b2f43f6" name="Changes" comment="Retrieval services: cache, asynchronous, item details; Authentication services: SMS, OAuth2.0, session">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_alibaba_commons_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_alibaba_sentinel_datasource_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_alibaba_sentinel_gateway_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_circuitbreaker_sentinel_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_nacos_config_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_nacos_discovery_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_sentinel_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_annotation_aspectj_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_api_gateway_adapter_common_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_cluster_client_default_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_cluster_common_default_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_cluster_server_default_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_datasource_extension_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_parameter_flow_control_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_reactor_adapter_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_spring_cloud_gateway_adapter_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_spring_webflux_adapter_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_spring_webmvc_adapter_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_transport_common_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_transport_simple_http_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_zuul_adapter_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_nacos_nacos_common_1_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alipay_sdk_alipay_sdk_java_4_22_34_ALL.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_24_1_1_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_5_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_context_slf4j_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_http_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_httpasyncclient_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_httpclient_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_jms_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_kafka_clients_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_kafka_streams_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_messaging_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_rpc_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_servlet_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_rabbit_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_web_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_webmvc_5_12_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_brave_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_metrics_micrometer_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_activemq_client_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_amqp_client_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_kafka_2_15_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_zipkin2_zipkin_2_21_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_62.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_marshalling_jboss_marshalling_2_0_11_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_marshalling_jboss_marshalling_river_2_0_11_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_spring_boot_starter_3_16_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_spring_data_25_3_16_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_2_15_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_2_15_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_3_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_3_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_3_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_core_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_core_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_zipkin_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_gateway_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_sleuth_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_zipkin_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_2_13_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/smartfox_info.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/file.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/registry.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/PineconemallCartApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/config/MyThreadConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/config/PineconemallSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/config/ThreadPoolConfigProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/feign/ProductFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/interceptor/CartInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/to/SkuInfoTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/to/UserInfoTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/vo/CartItemVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/java/plus/carlosliu/pineconemall/cart/vo/CartVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/resources/file.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/resources/registry.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/resources/templates/cartList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/main/resources/templates/success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-cart/src/test/java/plus/carlosliu/pineconemall/cart/PineconemallCartApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/constant/AuthServerConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/constant/CartConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/constant/OrderConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/constant/SecKillConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/constant/WareStockConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/enume/OrderStatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/exception/NoStockException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/to/SpuInfoTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/to/mq/OrderTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/to/mq/SeckillOrderTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/to/mq/StockDetailTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/to/mq/StockLockedTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-gateway/src/main/java/plus/carlosliu/pineconemall/gateway/config/SentinelGatewayConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/config/MyFeignConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/feign/OrderFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/to/WeiboSocialUserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/web/MemberWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-member/src/main/resources/templates/orderList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/AlipayTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/MyFeignConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/MyMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/MyRabbitConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/MySeataConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/MyThreadConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/MyWebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/PineconemallSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/ThreadPoolConfigProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/enume/OrderStatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/feign/CartFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/feign/MemberFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/feign/ProductFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/feign/WareFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/interceptor/LoginUserInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/listener/OrderCloseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/listener/OrderPayedListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/listener/OrderSecKillListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/to/MemberAddressTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/to/OrderCreateTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/to/OrderItemTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/to/SeckillSkuRedisTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/to/SkuInfoTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/to/SkuStockTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/to/SpuInfoTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/to/WareSkuLockTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/vo/FareVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/vo/OrderConfirmVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/vo/OrderSubmitVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/vo/PayAsyncVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/vo/PayVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/vo/SubmitOrderResponseVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/web/OrderWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/web/PayWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/file.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/registry.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/templates/confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/templates/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/templates/pay.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/config/MyFeignConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/feign/SecKillFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/feign/fallback/SecKillFallbackService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/to/SecKillInfoTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-product/src/main/resources/file.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-product/src/main/resources/registry.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/config/PineconemallSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/PineconemallSeckillApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/config/MyMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/config/PineconemallSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/config/ScheduleConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/controller/SecKillController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/feign/CouponFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/feign/ProductFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/interceptor/LoginUserInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/schedule/SecKillSchedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/service/SecKillService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/service/impl/SecKillServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/to/SeckillSessionWithSkusTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/to/SeckillSkuRedisTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/to/SeckillSkuTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/java/plus/carlosliu/pineconemall/seckill/to/SkuInfoTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/main/resources/templates/success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-seckill/src/test/java/plus/carlosliu/pineconemall/seckill/PineconemallSeckillApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-third-party/src/main/java/plus/carlosliu/pineconemall/thridparty/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/config/MyMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/config/MySeataConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/config/MySentinelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/feign/MemberFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/feign/OrderFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/listener/StockReleaseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/to/LockStockResultTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/to/MemberAddressTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/to/OrderItemTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/to/SecKillStockTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/to/WareSkuLockTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/vo/FareVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/resources/file.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/resources/registry.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_nacos_config_2_2_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_nacos_config_2_2_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_nacos_discovery_2_2_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_cloud_spring_cloud_starter_alibaba_nacos_discovery_2_2_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_nacos_nacos_client_1_4_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_30_1_jre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_71.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_nacos_nacos_api_1_4_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_csp_sentinel_core_1_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_ruedigermoeller_fst_2_57.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_10_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_10_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_3_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava2_rxjava_2_2_21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava3_rxjava_3_0_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpasyncclient_4_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_nio_4_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_bean_5_0_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_core_5_0_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_core_5_1_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_3_12_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_3_16_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_3_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_4_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_2_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_2_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_2_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_2_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_server_2_2_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_server_2_2_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_2_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_2_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_2_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_2_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_gateway_2_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_2_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_2_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_2_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_3_7_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_3_7_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_3_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_data_redis_2_3_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_data_redis_2_3_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_13_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_bean_5_1_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="294b2a05-aaa5-4284-b628-c5b47b2f43f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/constant/AuthServerConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/constant/AuthServerConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/feign/MemberFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/feign/MemberFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/vo/SocialUserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/vo/SocialUserVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/web/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/web/OAuth2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/java/plus/carlosliu/pineconemall/auth/web/OAuth2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/exception/BizCodeEnume.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/exception/BizCodeEnume.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/utils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-common/src/main/java/plus/carlosliu/common/utils/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/controller/SeckillSessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/controller/SeckillSessionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/controller/SeckillSkuRelationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/controller/SeckillSkuRelationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/entity/SeckillSessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/entity/SeckillSessionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/service/SeckillSessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/service/SeckillSessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/service/SeckillSkuRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/service/SeckillSkuRelationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/service/impl/SeckillSessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/service/impl/SeckillSessionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/service/impl/SeckillSkuRelationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/java/plus/carlosliu/pineconemall/coupon/service/impl/SeckillSkuRelationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-coupon/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-coupon/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/constant/OAuthConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/constant/OAuthConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/controller/MemberReceiveAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/controller/MemberReceiveAddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/feign/CouponFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/feign/CouponFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/service/MemberReceiveAddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/service/MemberReceiveAddressService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/service/impl/MemberReceiveAddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/service/impl/MemberReceiveAddressServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/service/impl/MemberServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/to/SocialUserTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/java/plus/carlosliu/pineconemall/member/to/SocialUserTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/PineconemallOrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/PineconemallOrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/entity/OrderEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/resources/mapper/order/OrderDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/resources/mapper/order/OrderDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/app/SkuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/app/SkuInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/app/SkuSaleAttrValueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/app/SkuSaleAttrValueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/app/SpuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/app/SpuInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/config/MyCacheConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/config/MyCacheConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/config/RedissonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/config/RedissonConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/dao/SkuSaleAttrValueDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/dao/SkuSaleAttrValueDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/SkuSaleAttrValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/SkuSaleAttrValueService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/SpuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/SpuInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SkuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SkuInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SkuSaleAttrValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SkuSaleAttrValueServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SpuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/vo/web/SkuItemVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/vo/web/SkuItemVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/resources/mapper/product/SkuSaleAttrValueDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/resources/mapper/product/SkuSaleAttrValueDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/resources/templates/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/resources/templates/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/PineconemallSearchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/PineconemallSearchApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/thread/ThreadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/thread/ThreadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-third-party/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-third-party/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-third-party/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-third-party/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-third-party/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-third-party/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/PineconemallWareApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/PineconemallWareApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/controller/WareInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/controller/WareInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/controller/WareSkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/controller/WareSkuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/dao/WareSkuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/dao/WareSkuDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/entity/WareOrderTaskDetailEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/entity/WareOrderTaskDetailEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/WareInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/WareInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/WareSkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/WareSkuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/impl/WareInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/impl/WareInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/impl/WareSkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/impl/WareSkuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/resources/mapper/ware/WareSkuDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/resources/mapper/ware/WareSkuDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/listener/OrderPayedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/listener/OrderPayedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/config/PineconemallElasticSearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/config/PineconemallElasticSearchConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/constant/EsConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/constant/EsConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/src/main/resources/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator/src/main/resources/generator.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -441,7 +76,7 @@
     <property name="ToolWindowServices.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/feign/fallback" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../系统默认/桌面/电脑/21-22大三上/实训作业/newsManage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -450,7 +85,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -502,17 +137,17 @@
       <method v="2" />
     </configuration>
     <configuration name="pineconemall" type="CompoundRunConfigurationType">
-      <toRun name="PineconemallGatewayApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="PineconemallAuthServerApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="PineconemallCartApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="PineconemallCouponApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="PineconemallSeckillApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="PineconemallOrderApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="PineconemallThridPartyApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="PineconemallMemberApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="PineconemallProductApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="PineconemallSearchApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PineconemallCouponApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PineconemallOrderApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="PineconemallWareApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PineconemallAuthServerApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PineconemallMemberApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PineconemallSearchApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PineconemallThridPartyApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PineconemallGatewayApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PineconemallSeckillApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
     </configuration>
     <configuration name="PineconemallProductApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -840,7 +475,44 @@
       <workItem from="1645153601480" duration="8041000" />
       <workItem from="1645166739891" duration="1065000" />
       <workItem from="1645174791841" duration="5243000" />
-      <workItem from="1645181835707" duration="13848000" />
+      <workItem from="1645181835707" duration="14343000" />
+      <workItem from="1645407769908" duration="1738000" />
+      <workItem from="1645411201197" duration="3075000" />
+      <workItem from="1645416320244" duration="1436000" />
+      <workItem from="1645418048298" duration="120000" />
+      <workItem from="1646226532101" duration="88000" />
+      <workItem from="1646226740364" duration="4447000" />
+      <workItem from="1646566958803" duration="1043000" />
+      <workItem from="1646568015103" duration="108000" />
+      <workItem from="1646571994727" duration="1144000" />
+      <workItem from="1651924933074" duration="1259000" />
+      <workItem from="1652237805989" duration="50000" />
+      <workItem from="1654337630829" duration="14000" />
+      <workItem from="1654394169229" duration="288000" />
+      <workItem from="1655536534944" duration="1269000" />
+      <workItem from="1655560671846" duration="657000" />
+      <workItem from="1655561490904" duration="474000" />
+      <workItem from="1661955808873" duration="1540000" />
+      <workItem from="1661993792739" duration="755000" />
+      <workItem from="1662120501267" duration="2875000" />
+      <workItem from="1662435760435" duration="588000" />
+      <workItem from="1663066014379" duration="523000" />
+      <workItem from="1663294536210" duration="6000" />
+      <workItem from="1672398361104" duration="611000" />
+      <workItem from="1672487664074" duration="6752000" />
+      <workItem from="1672647295402" duration="4305000" />
+      <workItem from="1672651961656" duration="540000" />
+      <workItem from="1676793682997" duration="7170000" />
+      <workItem from="1680619870237" duration="1974000" />
+      <workItem from="1680622023365" duration="309000" />
+      <workItem from="1680782175016" duration="4624000" />
+      <workItem from="1680833159906" duration="1693000" />
+      <workItem from="1680840662384" duration="8811000" />
+      <workItem from="1681525743787" duration="3992000" />
+      <workItem from="1681626244917" duration="10789000" />
+      <workItem from="1681698848765" duration="5891000" />
+      <workItem from="1681707154663" duration="344000" />
+      <workItem from="1681707657007" duration="17460000" />
     </task>
     <task id="LOCAL-00001" summary="Initializing projects, rapid development and reverse generation of microservices.">
       <created>1642660425547</created>
@@ -877,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644240336206</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Project Over">
+      <created>1645195979796</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1645195979796</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -888,7 +567,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -901,16 +592,12 @@
     <MESSAGE value="After self optimization." />
     <MESSAGE value="Completed the development of background management system." />
     <MESSAGE value="Retrieval services: cache, asynchronous, item details; Authentication services: SMS, OAuth2.0, session" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retrieval services: cache, asynchronous, item details; Authentication services: SMS, OAuth2.0, session" />
+    <MESSAGE value="Project Over" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project Over" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/AttrServiceImpl.java</url>
-          <line>256</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SpuInfoServiceImpl.java</url>
           <line>82</line>
@@ -1160,6 +847,11 @@
           <url>file://$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/service/impl/OrderServiceImpl.java</url>
           <line>162</line>
           <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/CategoryServiceImpl.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="213" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

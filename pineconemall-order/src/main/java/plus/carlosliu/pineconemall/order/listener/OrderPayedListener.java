@@ -38,7 +38,7 @@ public class OrderPayedListener {
         Map<String, String[]> requestParams = request.getParameterMap();
         for (String name : requestParams.keySet()) {
             String[] values = requestParams.get(name);
-            String valueStr = "";
+             String valueStr = "";
             for (int i = 0; i < values.length; i++) {
                 valueStr = (i == values.length - 1) ? valueStr + values[i]
                         : valueStr + values[i] + ",";

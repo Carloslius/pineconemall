@@ -16,7 +16,7 @@ public class PineconemallElasticSearchConfig {
 
     @Bean
     public RestHighLevelClient esRestClient(){
-        RestClientBuilder builder = RestClient.builder(new HttpHost("101.35.192.127", 9200, "http"));
+        RestClientBuilder builder = RestClient.builder(new HttpHost("39.103.189.107", 9200, "http"));
         RestHighLevelClient client = new RestHighLevelClient(builder);
 //        RestHighLevelClient client = new RestHighLevelClient(
 //                RestClient.builder(new HttpHost("101.35.192.127", 9200, "http"))
