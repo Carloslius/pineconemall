@@ -18,7 +18,7 @@
 			<div class="laoda">
 		<div class="zong">
 			<div class="tou">
-				<p><b>谷粒商城用户注册协议和隐私政策</b></p>
+				<p><b>松果商城用户注册协议和隐私政策</b></p>
 				<a href="/static/register/https://www.jd.com/" class="cuo"><span class="glyphicon glyphicon-remove"></span></a>
 			</div>
 			<div class="zt">
@@ -5256,8 +5256,9 @@ Cookie</span>是由网页服务器存放在您的访问设备上的文本文件�
 							dataType:"json",
 							contentType: "application/json;charset=utf-8",
 							success: function (result){
+								console.log(result);
 								if (result == "true"){
-									location.href = "http://pineconemall.com";
+									window.location.href = "http://pineconemall.com";
 								}else{
 									console.log(result);
 									console.log(result.username);

@@ -63,7 +63,7 @@ public class WareInfoServiceImpl extends ServiceImpl<WareInfoDao, WareInfoEntity
         if (r.getCode() == 0){
             MemberAddressTo address = r.getData("memberReceiveAddress", new TypeReference<MemberAddressTo>() {});
             if (address != null){
-                // TODO:结合第三方接口
+                // TODO:结合第三方接口获取运费 未实现
                 fareVo.setFare(new BigDecimal("10.0"));
                 fareVo.setAddress(address);
                 return fareVo;

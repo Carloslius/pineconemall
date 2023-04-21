@@ -103,7 +103,7 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
             wareSku.setStockLocked(0);
             // 远程查询sku的名字，如果失败，整个事务无需回滚
             // 1、自己catch异常
-            // 2、TODO：还可以用什么办法让异常出现以后不回滚？高级部分
+            // 2、TODO：还可以用什么办法让异常出现以后不回滚？消息队列机制重试 未实现
             try {
                 R info = productFeignService.info(skuId);
                 Map<String, Object> data = (Map<String, Object>) info.get("skuInfo");
@@ -133,7 +133,7 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
     @Transactional
     @Override
     public void orderLockStock(WareSkuLockTo wareSkuLockTo) {
-        // TODO: 2022/2/10 按照下单地址寻找就近仓库
+        // TODO: 按照下单地址寻找就近仓库，第三方接口的定位和最短距离选择算法 未实现
         // 因为可能出现订单回滚后，库存锁定不回滚的情况，但订单已经回滚，得不到库存锁定信息，因此要有库存工作单
         WareOrderTaskEntity taskEntity = new WareOrderTaskEntity();
         taskEntity.setOrderSn(wareSkuLockTo.getOrderSn());

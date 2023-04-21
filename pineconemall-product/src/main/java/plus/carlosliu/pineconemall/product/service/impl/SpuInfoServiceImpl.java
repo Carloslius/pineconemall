@@ -74,7 +74,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         return new PageUtils(page);
     }
 
-    // TODO：高级部分完善失败情况
+    // TODO：高级部分完善失败情况，消息队列的可靠确认机制
     // Seata AT分布式事务
     //@GlobalTransactional
     @Override
@@ -258,7 +258,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
                 skuEsModel.setHasStock(finalSkuHasStock.get(sku.getSkuId()));
             }
 
-            //TODO：4、热度评分
+            //TODO：4、热度评分 未实现
             skuEsModel.setHotScore(0L);
 
             // 5、查询品牌和分类信息的名字

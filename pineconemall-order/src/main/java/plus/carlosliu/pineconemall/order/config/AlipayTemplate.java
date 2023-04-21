@@ -22,7 +22,7 @@ public class AlipayTemplate {
     // 支付宝公钥,查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。
     private String alipay_public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnx5JBt9KDb+xQbYn7M5NVgjPBVHgl1is2MNv12or/5i+Pj/KHot84uIDkidQ/E4jXBhA3bvucCnIgjaVBf4X6Jh3W0pPZ0a1WlH01HXPUo3BXJHYp5+qceb+eVaPPr2bRTWvzaoQDKnP1N/3d8JRdxmUTs9UmtSsMMGnJMs9wxRpMjKPF9P/xGzoTJ/OlyFWVETQjqZ1Jlri/WiQsmh5ISvs0VSz6nrWzIdM2VOS8Gl1Zg1THmdS7b0hPK7XmzR2V4FtiSXKpj7Ma07Ir9xemAY8/lruwLd9MhSqxZc5uI4iZtEZClXHKK849ZsKrsy4VgHIm/F6aP96RNnWexYRwQIDAQAB";
     // 支付宝会悄悄的给我们发送一个请求，告诉我们支付成功的信息
-    private String notify_url = "http://4879p0418l.zicp.vip/payed/notify";
+    private String notify_url = "http://570f4be5.nat123.fun/payed/notify";
 
     // 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
     //同步通知，支付成功，一般跳转到成功页

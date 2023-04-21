@@ -9,11 +9,15 @@
   <component name="ChangeListManager">
     <list default="true" id="294b2a05-aaa5-4284-b628-c5b47b2f43f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/listener/OrderPayedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/listener/OrderPayedListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/config/PineconemallElasticSearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/config/PineconemallElasticSearchConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/constant/EsConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-search/src/main/java/plus/carlosliu/pineconemall/search/constant/EsConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renren-generator/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renren-generator/src/main/resources/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator/src/main/resources/generator.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-auth-server/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-member/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-member/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/AlipayTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-order/src/main/java/plus/carlosliu/pineconemall/order/config/AlipayTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/ProductAttrValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/ProductAttrValueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SpuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-product/src/main/java/plus/carlosliu/pineconemall/product/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-third-party/src/main/java/plus/carlosliu/pineconemall/thridparty/component/SmsComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-third-party/src/main/java/plus/carlosliu/pineconemall/thridparty/component/SmsComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/impl/WareInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/impl/WareInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/impl/WareSkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pineconemall-ware/src/main/java/plus/carlosliu/pineconemall/ware/service/impl/WareSkuServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -512,7 +516,17 @@
       <workItem from="1681626244917" duration="10789000" />
       <workItem from="1681698848765" duration="5891000" />
       <workItem from="1681707154663" duration="344000" />
-      <workItem from="1681707657007" duration="17460000" />
+      <workItem from="1681707657007" duration="18161000" />
+      <workItem from="1681780640146" duration="851000" />
+      <workItem from="1681782762049" duration="1814000" />
+      <workItem from="1681889091764" duration="593000" />
+      <workItem from="1681985636412" duration="454000" />
+      <workItem from="1681989825074" duration="6134000" />
+      <workItem from="1682005035148" duration="2988000" />
+      <workItem from="1682042327830" duration="8128000" />
+      <workItem from="1682061498688" duration="16956000" />
+      <workItem from="1682089813228" duration="3396000" />
+      <workItem from="1682093462461" duration="357000" />
     </task>
     <task id="LOCAL-00001" summary="Initializing projects, rapid development and reverse generation of microservices.">
       <created>1642660425547</created>
@@ -556,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645195979796</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="switch server">
+      <created>1681740398229</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681740398230</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +614,8 @@
     <MESSAGE value="Completed the development of background management system." />
     <MESSAGE value="Retrieval services: cache, asynchronous, item details; Authentication services: SMS, OAuth2.0, session" />
     <MESSAGE value="Project Over" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Over" />
+    <MESSAGE value="switch server" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

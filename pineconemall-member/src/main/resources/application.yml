@@ -6,3 +6,13 @@ ribbon:
       - pineconemall-coupon
   ReadTimeout: 60000
   ConnectTimeout: 60000
+
+spring:
+  session:
+    store-type: redis
+  redis:
+    host: 39.103.189.107
+server:
+  servlet:
+    session:
+      timeout: 600

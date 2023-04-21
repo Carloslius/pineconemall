@@ -53,7 +53,7 @@ public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> impleme
         // 2、修改关联信息，pms_category_brand_relation(类别和品牌关联表)中品牌名也需要改变
         if (!StringUtils.isEmpty(brand.getName())){
             categoryBrandRelationService.updateBrandNameCascade(brand.getBrandId(), brand.getName());
-            // TODO:是否有其他需要级联更改的字段
+            // TODO:是否有其他需要级联更改的字段 目前项目中没有
         }
     }
 

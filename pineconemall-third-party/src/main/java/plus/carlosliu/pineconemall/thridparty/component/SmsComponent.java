@@ -25,13 +25,21 @@ public class SmsComponent {
         String method = "POST";
         Map<String, String> headers = new HashMap<String, String>();
         //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
+//        headers.put("Authorization", "APPCODE " + appcode);
+//        Map<String, String> querys = new HashMap<String, String>();
+//        querys.put("mobile", phone);
+//        querys.put("param", "**code**:"+code+",**minute**:"+minute);
+//        querys.put("smsSignId", smsSignId);
+//        querys.put("templateId", templateId);
+//        Map<String, String> bodys = new HashMap<String, String>();
+
         headers.put("Authorization", "APPCODE " + appcode);
+        headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
         Map<String, String> querys = new HashMap<String, String>();
-        querys.put("mobile", phone);
-        querys.put("param", "**code**:"+code+",**minute**:"+minute);
-        querys.put("smsSignId", smsSignId);
-        querys.put("templateId", templateId);
         Map<String, String> bodys = new HashMap<String, String>();
+        bodys.put("content", "code:" + code);
+        bodys.put("phone_number", phone);
+        bodys.put("template_id", "CST_ptdie100");
 
         try {
             HttpResponse response = HttpUtils.doPost(host, path, method, headers, querys, bodys);

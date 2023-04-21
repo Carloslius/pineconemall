@@ -41,7 +41,7 @@ public class ProductAttrValueServiceImpl extends ServiceImpl<ProductAttrValueDao
 
     @Override
     public void updateSpuAttr(Long spuId, List<ProductAttrValueEntity> productAttrValueList) {
-        // TODO：注意是否有其他地方级联ProductAttrValueEntity的自增id
+        // TODO：注意是否有其他地方级联ProductAttrValueEntity的自增id 目前项目中没有
         // 1、删除这个spuID之前对应的所有属性
         LambdaQueryWrapper<ProductAttrValueEntity> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(spuId != null, ProductAttrValueEntity::getSpuId, spuId);
